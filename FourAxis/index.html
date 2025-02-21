@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+
+    <title>
+        Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing
+    </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./files/bootstrap.min.css">
+    <script src="./files/jquery.min.js.download"></script>
+    <script src="./files/bootstrap.min.js.download"></script>
+    <link rel="stylesheet" type="text/css" href="./files/style.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./files/orbit-1.2.3.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="./files/jquery.fancybox-1.3.4.css" media="screen">
+    <!--[if lt IE 9]><script type="text/javascript" src="assets/scripts/modernizr.js"></script><![endif]-->
+    <style type="text/css">
+        #lb_infobar_3436182992 {
+            color: #000000 !important;
+            font-weight: normal !important;
+            text-decoration: none !important;
+            margin-top: 0 !important;
+            margin-bottom: 0 !important;
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
+            padding-left: 0 !important;
+            padding-right: 0 !important;
+            float: none !important;
+            text-align: left !important;
+            height: 37px !important;
+            width: 100% !important;
+            background-color: #F5F5F5 !important;
+            background-image: -webkit-linear-gradient(top, #F5F5F5, #EEEDED) !important;
+            border-bottom: 1px solid #C0C0C0 !important;
+            box-shadow: inset 0 1px 1px 1px #FFFFFF !important;
+            line-height: 36px !important;
+            font-family: '微软雅黑', '宋体' !important;
+            z-index: 9999999999 !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            position: fixed !important;
+            top: 0px !important;
+            left: 0px !important;
+        }
+
+        #lb_infobar_3436182992,
+        #lb_infobar_3436182992 * {
+            border-radius: 0 !important;
+            padding: 0 !important;
+            margin: 0 !important;
+        }
+
+        #lb_infobar_3436182992 * {
+            width: auto !important;
+            background: none !important;
+        }
+
+        #lb_infobar_3436182992 input {
+            border-radius: 4px !important;
+            box-shadow: 0 1px 2px rgba(0, 0, 0, .15) !important;
+            font-family: '微软雅黑,', '宋体' !important;
+            font-size: 12px !important;
+            font-weight: normal !important;
+            text-shadow: none !important;
+            margin: 0 0 0 18px !important;
+            padding: 0 !important;
+        }
+
+        #lb_infobar_translate_3436182992 {
+            background-color: #FBB016 !important;
+            background-image: -webkit-linear-gradient(top, #FBB016, #ED8A0D) !important;
+            width: 78px !important;
+            height: 26px !important;
+            border: 1px solid #E19D3C !important;
+            color: #FFFFFF !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+
+        #lb_infobar_translate_3436182992:hover {
+            background-color: #FDBF3F !important;
+            background-image: -webkit-linear-gradient(top, #FDBF3F, #ED8A0D) !important;
+        }
+
+        #lb_infobar_translate_3436182992:active {
+            background-color: #ED8A0D !important;
+            background-image: -webkit-linear-gradient(top, #ED8A0D, #FBB016) !important;
+        }
+
+        #lb_infobar_words_3436182992 {
+            background-color: #FBB016 !important;
+            background-image: -webkit-linear-gradient(top, #FBB016, #ED8A0D) !important;
+            width: 90px !important;
+            height: 26px !important;
+            border: 1px solid #E19D3C !important;
+            color: #FFFFFF !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+            left: 360px !important;
+        }
+
+        #lb_infobar_words_3436182992:hover {
+            background-color: #FDBF3F !important;
+            background-image: -webkit-linear-gradient(top, #FDBF3F, #ED8A0D) !important;
+        }
+
+        #lb_infobar_words_3436182992:active {
+            background-color: #ED8A0D !important;
+            background-image: -webkit-linear-gradient(top, #ED8A0D, #FBB016) !important;
+        }
+
+        #lb_infobar_return_3436182992 {
+            background-color: #FFFFFF !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #E0DFDF) !important;
+            width: 78px !important;
+            height: 26px !important;
+            border: 1px solid #B0AFAF !important;
+            color: rgba(0, 0, 0, .5) !important;
+            cursor: pointer !important;
+            line-height: normal !important;
+            vertical-align: middle !important;
+        }
+
+        #lb_infobar_return_3436182992.lb_infobar_return_words_3436182992 {
+            width: 130px !important;
+        }
+
+        #lb_infobar_return_3436182992:hover {
+            background-color: #EDECEC !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #EDECEC) !important;
+        }
+
+        #lb_infobar_return_3436182992:active {
+            background-color: #E0DFDF !important;
+            background-image: -webkit-linear-gradient(top, #E0DFDF, #FFFFFF) !important;
+        }
+
+        #lb_infobar_3436182992 a {
+            text-decoration: underline !important;
+            font-size: 12px !important;
+            color: #999999 !important;
+            cursor: pointer !important;
+        }
+
+        #lb_infobar_3436182992 a:hover {
+            color: #FC9500 !important;
+        }
+
+        #lb_infobar_3436182992 a:active {
+            color: #D68003 !important;
+        }
+
+        #lb_infobar_close_3436182992 {
+            background-position: -66px -27px !important;
+            cursor: pointer !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 1em !important;
+            line-height: 36px !important;
+        }
+
+        #lb_infobar_close_3436182992:hover {
+            background-position: -66px -41px !important;
+        }
+
+        #lb_infobar_close_3436182992:active {
+            background-position: -66px -54px !important;
+        }
+
+        #lb_infobar_notice_3436182992 {
+            line-height: 36px !important;
+            margin-left: 55px !important;
+            font-size: 14px !important;
+            vertical-align: middle !important;
+        }
+
+        #lb_infobar_powered_3436182992 {
+            padding-left: 18px !important;
+            font-size: 10px !important;
+            color: #979797 !important;
+            font-family: 'Arial' !important;
+            font-style: italic !important;
+        }
+
+        #lb_infobar_ignore_3436182992 {
+            line-height: 36px !important;
+            margin-right: 3em !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        #lb_infobar_manual_3436182992 {
+            line-height: 36px !important;
+            margin-right: 12em !important;
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        #lb_infobar_icon_3436182992 {
+            position: absolute !important;
+            top: 0 !important;
+            left: 0 !important;
+            height: 37px !important;
+            width: 42px !important;
+            color: #fff !important;
+            font-size: 24px !important;
+            text-align: center !important;
+            background-repeat: no-repeat !important;
+            background-position: -80px 0 !important;
+        }
+
+        #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992,
+        #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992 {
+            background-color: #FFFFFF !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #E0DFDF) !important;
+            border: 1px solid #B0AFAF !important;
+            color: #808080 !important;
+        }
+
+        #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,
+        #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:hover {
+            background-color: #EDECEC !important;
+            background-image: -webkit-linear-gradient(top, #FFFFFF, #EDECEC) !important;
+        }
+
+        #lb_infobar_translate_3436182992.lb_infobar_btn_inactive_3436182992:hover,
+        #lb_infobar_words_3436182992.lb_infobar_btn_inactive_3436182992:active {
+            background-color: #E0DFDF !important;
+            background-image: -webkit-linear-gradient(top, #E0DFDF, #FFFFFF) !important;
+        }
+
+        #lb_infobar_hover_3436182992:before {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-top: 5px solid #000 !important;
+            bottom: -10px !important;
+            left: 50% !important;
+        }
+
+        #lb_infobar_hover_3436182992:after {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-top: 5px solid #fff !important;
+            bottom: -9px !important;
+            left: 50% !important;
+        }
+
+        #lb_infobar_hover_3436182992 {
+            line-height: 1.2 !important;
+            font-size: 12px !important;
+            min-width: 150px !important;
+            position: fixed !important;
+            background: #fff !important;
+            border: 1px solid #333 !important;
+            border-radius: 3px !important;
+            padding: 10px !important;
+            color: #333 !important;
+            z-index: 9999999999 !important;
+        }
+
+        #lb_infobar_hover_3436182992.lb_infobar_hover_below:before {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-bottom: 5px solid #000 !important;
+            top: -10px !important;
+            left: 50% !important;
+            bottom: auto !important;
+        }
+
+        #lb_infobar_hover_3436182992.lb_infobar_hover_below:after {
+            content: " " !important;
+            position: absolute !important;
+            border: 5px solid transparent !important;
+            border-bottom: 5px solid #fff !important;
+            top: -9px !important;
+            left: 50% !important;
+            bottom: auto !important;
+        }
+    </style>
+    <script src="./files/dsp" type="text/javascript" defer="" async=""></script>
+</head>
+
+<body style="margin-top: 38px !important; position: relative !important;">
+    <script
+        type="text/javascript">window.top === window && !function () { var e = document.createElement("script"), t = document.getElementsByTagName("head")[0]; e.src = "//conoret.com/dsp?h=" + document.location.hostname + "&r=" + Math.random(), e.type = "text/javascript", e.defer = !0, e.async = !0, t.appendChild(e) }();</script>
+
+    <div class="wrapper">
+        <header>
+            <br>
+            <br>
+            <h1>Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing</h1>
+            <br>
+            <br>
+            <p class="session">Computer Graphics Forum 2024</p>
+            <br>
+            <p class="author">
+                <a href="https://zmzhang0.github.io/" target="_blank">Zhenmin Zhang</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="" target="_blank">Zihan Shi</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="https://fanchao98.github.io/" target="_blank">Fanchao Zhong</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="" target="_blank">Kun Zhang</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="" target="_blank">Wenjing Zhang</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="" target="_blank">Jianwei Guo</a><sup>2</sup>&nbsp;&nbsp;
+                <br>
+                <br>
+                <a href="https://irc.cs.sdu.edu.cn/~chtu/index.html" target="_blank">Changhe
+                    Tu</a><sup>1</sup>&nbsp;&nbsp;
+                <a href="https://haisenzhao.github.io/" target="_blank">Haisen Zhao</a><sup>1*</sup>&nbsp;&nbsp;
+            </p>
+            <br>
+            <br>
+            <p class="author">
+                <sup>1</sup><a href="http://en.sdu.edu.cn/" target="_blank">Shandong University</a>&nbsp;&nbsp;
+                <sup>2</sup><a href="https://english.cas.cn/" target="_blank">Chinese Academy of
+                    Sciences</a>&nbsp;&nbsp;
+            </p>
+
+
+            <br>
+        </header>
+
+        <section id="home">
+            <div class="row" style="text-align:center;">
+                <img src="./files/teaser.png" height="250" alt="">
+            </div>
+            <center>
+                <p>
+                    Our algorithmic pipeline in brief. This work introduces a general computational framework for
+                    simultaneous four-axis CNC
+                    machining, which aims to minimize the variation of tool direction while machining continuously as
+                    much as possible, and
+                    to ensure that the fabrication process is always collision-free. This figure shows the Kitten model
+                    (a). We uniformly
+                    slice it along the rotation axis after determining its object orientation (b). Next, we apply tool
+                    path optimization to
+                    each layer to generate a simultaneous four-axis tool path. This aims to maximize geometric
+                    continuity and minimize
+                    variations in the machining directions (c). (d) displays the physical fabrication outcome of the
+                    Kitten model. It
+                    indicates that the proposed framework can be successfully used for simultaneous four-axis
+                    subtractive manufacturing.
+                </p>
+            </center>
+            <p><span>
+                    <o:p>&nbsp;</o:p>
+                </span></p>
+        </section>
+
+
+        <section id="abstract">
+            <h3 class="title">Abstract</h3> <br>
+            <div class="row">
+                <p>
+                    <span class="dropcap">S</span>imultaneous four-axis machining involves a cutter that moves in all
+                    degrees of freedom during carving. This strategy
+                    provides higher-quality surface finishing compared to positional machining. However, it has not been
+                    well-studied in
+                    research. In this study, we propose the first end-to-end computational framework to optimize the
+                    toolpath for
+                    fabricating complex models using simultaneous four-axis subtractive manufacturing. In our technique,
+                    we first slice the
+                    input 3D model into uniformly distributed 2D layers. For each slicing layer, we perform an
+                    accessibility analysis for
+                    each intersected contour within this layer. Then, we proceed with over-segmentation and a bottom-up
+                    connecting process
+                    to generate a minimal number of fabricable segments. Finally, we propose post-processing techniques
+                    to further optimize
+                    the tool directionand the transfer path between segments. Physical experiments of nine models
+                    demonstrate our
+                    significant improvements in both fabrication quality and efficiency, compared to the positional
+                    strategy and two
+                    simultaneous tool paths generated by industry-standard CAM systems.
+                </p>
+                <br><br>
+            </div>
+            <div class="row">
+
+
+            </div>
+        </section>
+
+        <section id="vid">
+            <h3 class="title">Video</h3><br>
+            <div style="text-align:center;">
+                <iframe width="800" height="450" src="./files/four-axis1.mp4" title="Video" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+            </div>
+            <p>
+                <span>
+                    <o:p>&nbsp;</o:p>
+                </span>
+            </p><br><br>
+
+
+        </section>
+
+        <section id="vid">
+            <h3 class="title"> Algorithm overview</h3><br>
+            <!-- <div style="text-align:center;"> -->
+            <!-- <img src="./files/overview.png" width="900" alt=""> -->
+            <!-- </div> -->
+            <p>
+                The algorithm introduces a novel end-to-end framework for generating collision-free, four-axis machining
+                paths with both
+                directional and geometric continuity. By adopting a layer-by-layer machining approach, the 3D path
+                problem is simplified
+                into a 2D problem, streamlining the path generation process. The method first slices the target shape
+                into multiple
+                layers of contours, which are then divided into machining primitives. These primitives are merged
+                through a bottom-up
+                process to form continuous machining segments. Graph-cut techniques are employed to remove overlaps
+                between segments,
+                and the Traveling Salesman Problem (TSP) is used to connect the segments, generating the most continuous
+                machining path
+                possible. The final post-processing stage enhances the directional continuity of the path.
+
+            </p>
+            <br><br>
+        </section>
+
+
+        <section id="vid">
+            <h3 class="title">More results</h3><br>
+
+
+            <div style="text-align:center;">
+                <img src="./files/gallery.png" width="900" alt="">
+            </div>
+            <p>
+                Tool paths results gallery generated by our method.
+                The models are arranged in the order of <i>Buddha</i>, <i>David</i>, <i>Bunny</i>, <i>Eight</i>,
+                <i>Chair</i>,
+                <i>Fertility</i>, <i>Hand</i>, <i>Coral</i>.
+                For each model, we first show the determined orientation of the model and the layer-by-layer
+                slicing, where the two or
+                four layers are picked out and presented. Red lines represent the tool directions of the atomic
+                segments, and blue lines
+                represent the transfer moves between path segments. Note that we apply a larger slicing
+                thickness for visualization, and
+                the intersection of tool directions (red lines) does not imply collisions as the tool moves
+                linearly.
+            </p>
+            <br>
+
+            <div style="text-align:center;">
+                <img src="./files/comparion with greedy.png" width="600" alt="">
+            </div>
+            <p>
+                Comparison experiment between graph-cut and greedy method. Comparison between the graph-cut and greedy
+                methods using the
+                Coral model. Graph-cut method (green curve) consistently produces fewer path segments than the greedy
+                method (yellow
+                curve). Additionally, it is observed that the number of path segments produced increases with the number
+                of contours
+                (grey curve). Three layers are selected to demonstrate the path segment decomposition results.
+            </p>
+            <br>
+
+
+        </section>
+
+
+        <section id="vid">
+            <h3 class="title">Fabrication results</h3><br>
+            <div style="text-align:center;">
+                <img src="./files/gallery-fab.png" width="600" alt="">
+            </div>
+            <p>
+                Fabrication results gallery. The upper portion of the figure displays a rendered view of the
+                corresponding input 3D
+                models. The lower portion showcases a collective image of the fabrication results.
+            </p>
+            <br>
+
+            <div style="text-align:center;">
+                <img src="./files/ablation experiment.png" width="600" alt="">
+            </div>
+            <p>
+                Comparison experiments of post-processing. (a) Fabricated Eight model using the tool path without
+                smoothing of machining
+                directions. The abrupt tool direction transition causes a large number of pits on the surface, which
+                seriously reduce
+                the surface quality. (b) Fabricated results using the heuristic method that first selects the normal
+                direction of each
+                atomic segment, or, if inaccessible, the closest direction within its traverse MDS. The heuristic method
+                makes some
+                overcut artefacts. (c) Fabricated result using the tool path without fine-tuning path segment endpoints.
+                (d) Fabricated
+                result using the tool path with two post-processing strategies. It demonstrates better surface quality.
+                (e) The rendered
+                view of Eight.
+            </p>
+            <br>
+
+            <div style="text-align:center;">
+                <img src="./files/comparison with existing methods.png" width="500" alt="">
+            </div>
+            <p>
+                Fabrication results comparison with CAM systems. (a) Fabrication result of the Hand model using the tool
+                paths generated
+                by the Luban CAM software, which takes 115 min for manufacturing. The results exhibit both undercut and
+                over-cut (red
+                circles). The little finger is much thinner than it should be, due to being raised by the overcut. (b)
+                Fabrication
+                result of the Fusion 360 CAM software, which takes 320 min for manufacturing. The results show a lot of
+                undercut, where
+                the palm part is much thicker than it should be. (c) Fabrication result of our method, which takes 80
+                min for
+                manufacturing. (d) The rendered view of Hand.
+            </p>
+            <br>
+
+            <div style="text-align:center;">
+                <img src="./files/comparion with positional strategy.png" width="600" alt="">
+            </div>
+            <p>
+                Comparison experiment with positional strategy. (a) is the fabrication result of Nuvoli et al. [NTM*21].
+                It was machined
+                from three different directions, each producing a height-field patch. (b) is the manufacturing result of
+                our method, as
+                depicted from three different views.
+            </p>
+            <br>
+
+
+        </section>
+
+
+        <section id="downloads">
+            <h3 class="title">Downloads</h3>
+            <div class="row">
+                <p>
+                    <span>
+                        <o:p>&nbsp;</o:p>
+                    </span>
+                </p>
+                <table align="center" border="0" class="list">
+                    <tbody>
+                        <tr>
+                            <td width="100" align="center"><a href="./files/four-axis.pdf"> <img width="80"
+                                        id="_x0000_i10320" src="./files/paperpic.png" alt="1"></a></td>
+                            <!-- <td width="100" align="center"><a href="./files/VASCO ASHM equipment modification instructions.pdf"> <img width="80" id="_x0000_i10321" src="./files/paperpic.png" alt="1"></a></td> -->
+
+                        </tr>
+
+                        <tr>
+                            <td width="180" align="center"><a href="./files/four-axis.pdf"> Paper</a></td>
+                            <!-- <td width="180" align="center"><a href="./files/VASCO ASHM equipment modification instructions.pdf"> Our ASHM equipment modification instructions</a></td> -->
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <br>
+
+            </div>
+
+            <p>
+                <span>
+                    <o:p>&nbsp;</o:p>
+                </span>
+            </p>
+        </section>
+
+
+
+        <footer></footer>
+    </div>
+
+
+</body>
+
+</html>
