@@ -1515,6 +1515,7 @@ segmentation</b>
 			"tune-it:",
 			"wiresculptor:",
 			"co-optimization of design and fabrication plans",
+			"fabrication-aware reverse engineering",
 			"computational design of knit templates",
 			"robotic jigsaws:",
 			"carpentry compiler"
@@ -1557,19 +1558,21 @@ segmentation</b>
 	function normalize(text) {
 		return text.replace(/\s+/g, " ").replace(/\u2011|\u2012|\u2013|\u2014/g, "-").toLowerCase();
 	}
-	function findCategory(title) {
+	function findCategories(title) {
 		var category;
 		var i;
+		var matches = [];
 		for (category in categories) {
 			if (categories.hasOwnProperty(category)) {
 				for (i = 0; i < categories[category].length; i += 1) {
 					if (title.indexOf(categories[category][i]) !== -1) {
-						return category;
+						matches.push(category);
+						break;
 					}
 				}
 			}
 		}
-		return "other";
+		return matches.length ? matches : ["other"];
 	}
 	document.addEventListener("DOMContentLoaded", function () {
 		var table = document.querySelector(".publication-list tbody");
@@ -1593,7 +1596,7 @@ segmentation</b>
 					papers.push({
 						row: rows[i],
 						spacer: spacer,
-						category: findCategory(title)
+						categories: findCategories(title)
 					});
 					spacer = null;
 				}
@@ -1604,7 +1607,7 @@ segmentation</b>
 			var show;
 			var active;
 			for (i = 0; i < papers.length; i += 1) {
-				show = filter === "all" || papers[i].category === filter;
+				show = filter === "all" || papers[i].categories.indexOf(filter) !== -1;
 				papers[i].row.style.display = show ? "" : "none";
 				if (papers[i].spacer) {
 					papers[i].spacer.style.display = show ? "" : "none";
