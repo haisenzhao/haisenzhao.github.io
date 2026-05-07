@@ -282,16 +282,16 @@ Office: 408 <br>
 </strong></h3>
 
 <div class="publication-filter" aria-label="Filter publications by research area">
-  <div class="publication-filter-label">Research Areas</div>
+  <!--<div class="publication-filter-label">Research Areas</div>-->
   <div class="publication-filter-controls">
     <button type="button" class="active" data-filter="all" aria-pressed="true">All</button>
     <button type="button" data-filter="subtractive" aria-pressed="false">Subtractive Manufacturing / CNC</button>
+	 <button type="button" data-filter="additive" aria-pressed="false">Additive Manufacturing / 3D Printing</button>
     <button type="button" data-filter="hybrid" aria-pressed="false">Hybrid &amp; Remanufacturing</button>
+	    <button type="button" data-filter="geometry" aria-pressed="false"> Geometry Processing &amp; Generation</button>
     <button type="button" data-filter="crafting" aria-pressed="false">Computational Carpentry &amp; Crafting</button>
-    <button type="button" data-filter="additive" aria-pressed="false">Additive Manufacturing / 3D Printing</button>
-    <button type="button" data-filter="geometry" aria-pressed="false">Geometry Processing &amp; Point Clouds</button>
     <button type="button" data-filter="vision" aria-pressed="false">3D Reconstruction &amp; Vision</button>
-    <button type="button" data-filter="other" aria-pressed="false">Other Applications</button>
+    <button type="button" data-filter="other" aria-pressed="false">Others</button>
   </div>
   <div class="publication-filter-status" id="publication-filter-status"></div>
 </div>
@@ -1509,15 +1509,13 @@ segmentation</b>
 		hybrid: [
 			"waste-to-value",
 			"dhmp:",
-			"vasco:",
-			"geometric research and application"
+			"vasco:"
 		],
 		crafting: [
 			"tune-it:",
 			"wiresculptor:",
 			"co-optimization of design and fabrication plans",
 			"computational design of knit templates",
-			"fabrication-aware reverse engineering",
 			"robotic jigsaws:",
 			"carpentry compiler"
 		],
@@ -1532,16 +1530,18 @@ segmentation</b>
 		geometry: [
 			"manifold k-nn",
 			"rich and cross-fused",
-			"mind:",
-			"an algorithm for visibility computation"
+			"mind:"
 		],
 		vision: [
 			"from orbit to ground",
-			"recovering 3d shapes"
+			"recovering 3d shapes",
+			"fabrication-aware reverse engineering"
 		],
 		other: [
 			"printed perforated lampshades",
-			"variational circular treemaps"
+			"variational circular treemaps",
+			"an algorithm for visibility computation",
+			"geometric research and application"
 		]
 	};
 	var labels = {
@@ -1550,9 +1550,9 @@ segmentation</b>
 		hybrid: "Hybrid & Remanufacturing",
 		crafting: "Computational Carpentry & Crafting",
 		additive: "Additive Manufacturing / 3D Printing",
-		geometry: "Geometry Processing & Point Clouds",
+		geometry: "Geometry Processing & Generation",
 		vision: "3D Reconstruction & Vision",
-		other: "Other Applications"
+		other: "Others"
 	};
 	function normalize(text) {
 		return text.replace(/\s+/g, " ").replace(/\u2011|\u2012|\u2013|\u2014/g, "-").toLowerCase();
