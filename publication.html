@@ -118,6 +118,23 @@ line-height: 0px;
 .auto-style16 {
 	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
+.top-nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	gap: 16px;
+	padding: 8px 15px 0 15px;
+	font-family: Arial, Helvetica, sans-serif;
+}
+.top-nav-links {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0 10px;
+}
+.top-nav-right {
+	flex-shrink: 0;
+	white-space: nowrap;
+}
 a:hover {
 	color: #6376E6;
 }
@@ -199,25 +216,17 @@ a:hover {
 <div class="container">
 
 
-  <tbody>
-    <tr>
-      <td height="5" valign="top" width="1024" align="left">
-	  [<a href="./index.html" target="_parent" class="STYLE9">Home</a>]
-	  <!--[<a href="#Vita" target="_parent" class="STYLE9">Bio</a>]-->
-	  [<a href="./publication.html" target="_parent" class="STYLE9">Publications</a>]
-	  <!--[<a href="#Grants" target="_parent" class="STYLE9">Grants</a>]-->
-	  <!--[<a href="#Teaching" target="_parent" class="STYLE9">Teaching</a>]-->
-	  [<a href="./group.html" target="_parent" class="STYLE9">Group</a>]
-	  <!--[<a href="#Experience" target="_parent" class="STYLE9">Experience</a>]-->
- 	  <!--[<a href="#Awards" target="_parent" class="STYLE9">Honors and Awards</a>]-->
-	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<div class="top-nav">
+  <div class="top-nav-links">
+	  <span>[<a href="./index.html" target="_parent" class="STYLE9">Home</a>]</span>
+	  <span>[<a href="./publication.html" target="_parent" class="STYLE9">Publications</a>]</span>
+	  <span>[<a href="./group.html" target="_parent" class="STYLE9">Group</a>]</span>
+	  <span>[<a href="./opensource.html" target="_parent" class="STYLE9">Open Source</a>]</span>
+  </div>
+  <div class="top-nav-right">
 	   <a href="https://faculty.sdu.edu.cn/zhaohaisen/zh_CN/index.htm" target="_parent" class="STYLE9">Chinese Version</a>
-	  </td>
-	
-	  
-    </tr>
-  </tbody>
-</table>
+  </div>
+</div>
 
 
 
@@ -244,7 +253,7 @@ Office: 408 <br>
 
 </div>
 	</td>
-	<td valign="bottom" style="text-align: left; width: 148px;"><img src="images/haisenzhao.jpg" width="244" alt=""><br></td>
+	<td valign="bottom" style="text-align: left; width: 148px;"><img src="images/zhs/haisenzhao.jpg" width="244" alt=""><br></td>
 </tr>
 </tbody>
 </table>
