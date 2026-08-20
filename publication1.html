@@ -1814,8 +1814,6 @@ segmentation</b>
 		var status = document.getElementById("publication-filter-status");
 		var rows;
 		var papers = [];
-		var yearGroups = [];
-		var currentYear = null;
 		var spacer = null;
 		var i;
 		if (!table) {
@@ -1824,17 +1822,7 @@ segmentation</b>
 		rows = table.getElementsByTagName("tr");
 		for (i = 0; i < rows.length; i += 1) {
 			if (rows[i].querySelector("td[colspan='2']")) {
-				var separatorText = normalize(rows[i].textContent || rows[i].innerText || "");
-				if (/^\s*\d{4}\s*$/.test(separatorText)) {
-					currentYear = {
-						row: rows[i],
-						visiblePapers: 0
-					};
-					yearGroups.push(currentYear);
-					spacer = null;
-				} else {
-					spacer = rows[i];
-				}
+				spacer = rows[i];
 			} else if (rows[i].cells.length > 1) {
 				var titleNode = rows[i].cells[1].getElementsByTagName("b")[0];
 				if (titleNode) {
@@ -1842,7 +1830,6 @@ segmentation</b>
 					papers.push({
 						row: rows[i],
 						spacer: spacer,
-						year: currentYear,
 						categories: findCategories(title)
 					});
 					spacer = null;
@@ -1853,9 +1840,6 @@ segmentation</b>
 			var visible = 0;
 			var show;
 			var active;
-			for (i = 0; i < yearGroups.length; i += 1) {
-				yearGroups[i].visiblePapers = 0;
-			}
 			for (i = 0; i < papers.length; i += 1) {
 				show = filter === "all" || papers[i].categories.indexOf(filter) !== -1;
 				papers[i].row.style.display = show ? "" : "none";
@@ -1864,13 +1848,7 @@ segmentation</b>
 				}
 				if (show) {
 					visible += 1;
-					if (papers[i].year) {
-						papers[i].year.visiblePapers += 1;
-					}
 				}
-			}
-			for (i = 0; i < yearGroups.length; i += 1) {
-				yearGroups[i].row.style.display = yearGroups[i].visiblePapers ? "" : "none";
 			}
 			for (i = 0; i < buttons.length; i += 1) {
 				active = buttons[i].getAttribute("data-filter") === filter;
