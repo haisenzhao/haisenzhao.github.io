@@ -304,6 +304,7 @@ Office: 408 <br>
 	<button type="button" data-filter="cnc" aria-pressed="false">Subtractive Manufacturing</button>
     <button type="button" data-filter="hybridfab" aria-pressed="false">Hybrid Manufacturing</button>
     <button type="button" data-filter="codesignfab" aria-pressed="false">Design–Fabrication Integration</button>
+    <button type="button" data-filter="analysis" aria-pressed="false">Manufacturability Analysis</button>
     <button type="button" data-filter="dataset" aria-pressed="false">Datasets & Benchmarks</button>
     <button type="button" data-filter="wire" aria-pressed="false">Single Line</button>
     <button type="button" data-filter="carpentry" aria-pressed="false">Carpentry</button>
@@ -1830,6 +1831,16 @@ segmentation</b>
 			"carpentry compiler",
 			"computational design of knit templates"
 		],
+		analysis: [
+			"deepmill++: neural guidance meets rasterization",
+			"chapper: carvable hull-and-pack",
+			"deepmill: neural accessibility learning",
+			"vasco:",
+			"dscarver: decompose-and-spiral-carve",
+			"an algorithm for visibility computation",
+			"carvable packing of revolved 3d objects",
+			"as-continuous-as-possible"			
+		],
 		dataset: [
 		    "neural field-based",
 			"dhmp:",
@@ -1888,24 +1899,25 @@ segmentation</b>
 	};
 	var labels = {
 		all: "All",
-		learning: "Deep Learning",
+		learning: "AI & Geometric Learning",
 		geoprocess: "Geometric Process",
 		georecon: "3D Reconstruction",
-		geogen: "3D Generation",
-		spatplan: "Spatial Planning",
-		pathplan: "Path Planning",
-		printing: "3D Printing",
-		cnc: "CNC Machining",
+		geogen: "3D Geometry Generation",
+		spatplan: "Process & Sequence Planning",
+		pathplan: "Toolpath Planning",
+		printing: "Additive Manufacturing",
+		cnc: "Subtractive Manufacturing",
 		hybridfab: "Hybrid Manufacturing",
-		codesignfab: "Design‑Manufacturing Integration",
-		dataset: "Dataset Generation",
+		codesignfab: "Design‑Fabrication Integration",
+		analysis: "Manufacturability Analysis",
+		dataset: "Datasets & Benchmarks",
 		wire: "Single Line",
 		carpentry: "Carpentry",
 		voronoi: "Voronoi",
 		pack: "Packing",
 		decom: "Decomposition",
 		robot: "Robotics",
-		art: "Art",
+		art: "Computational Art & Craft",
 		other: "Others"
 	};
 	function normalize(text) {
