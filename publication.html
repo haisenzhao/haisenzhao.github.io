@@ -294,12 +294,24 @@ Office: 408 <br>
   <!--<div class="publication-filter-label">Research Areas</div>-->
   <div class="publication-filter-controls">
     <button type="button" class="active" data-filter="all" aria-pressed="true">All</button>
-    <button type="button" data-filter="subtractive" aria-pressed="false">Subtractive Manufacturing / CNC</button>
-	 <button type="button" data-filter="additive" aria-pressed="false">Additive Manufacturing / 3D Printing</button>
-    <button type="button" data-filter="hybrid" aria-pressed="false">Hybrid &amp; Remanufacturing</button>
-	    <button type="button" data-filter="geometry" aria-pressed="false"> Geometry Processing &amp; Generation</button>
-    <button type="button" data-filter="crafting" aria-pressed="false">Computational Carpentry &amp; Crafting</button>
-    <button type="button" data-filter="vision" aria-pressed="false">3D Reconstruction &amp; Vision</button>
+    <button type="button" data-filter="learning" aria-pressed="false">Deep Learning</button>
+    <button type="button" data-filter="geoprocess" aria-pressed="false">Geometric Process</button>
+    <button type="button" data-filter="georecon" aria-pressed="false">3D Reconstruction</button>
+	<button type="button" data-filter="geogen" aria-pressed="false">3D Generation</button>
+    <button type="button" data-filter="spatplan" aria-pressed="false">Spatial Planning</button>
+	<button type="button" data-filter="pathplan" aria-pressed="false">Path Planning</button>
+	<button type="button" data-filter="printing" aria-pressed="false">3D Printing</button>
+	<button type="button" data-filter="cnc" aria-pressed="false">CNC Machining</button>
+    <button type="button" data-filter="hybridfab" aria-pressed="false">Hybrid Manufacturing</button>
+    <button type="button" data-filter="codesignfab" aria-pressed="false">Design‑Manufacturing Integration</button>
+    <button type="button" data-filter="dataset" aria-pressed="false">Dataset Generation</button>
+    <button type="button" data-filter="wire" aria-pressed="false">Single Line</button>
+    <button type="button" data-filter="carpentry" aria-pressed="false">Carpentry</button>
+    <button type="button" data-filter="voronoi" aria-pressed="false">Voronoi</button>
+    <button type="button" data-filter="pack" aria-pressed="false">Packing</button>
+    <button type="button" data-filter="decom" aria-pressed="false">Decomposition</button>
+    <button type="button" data-filter="robot" aria-pressed="false">Robotics</button>
+    <button type="button" data-filter="art" aria-pressed="false">Art</button>
     <button type="button" data-filter="other" aria-pressed="false">Others</button>
   </div>
   <div class="publication-filter-status" id="publication-filter-status"></div>
@@ -422,11 +434,11 @@ Office: 408 <br>
 
                   <div style="color:SlateBlue;"><b>Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds</b>
                     <span style="color: rgba(0,0,0,1)">[<a
-                        href="">Project
+                        href="https://github.com/sssomeone/manifold-knn">Project
                         page</a>]</span>
                 </span>
               </div>
-              <A href="">Pengfei Wang</A>, 
+              <A href="https://pengfei.me/">Pengfei Wang</A>, 
               <A href="">Qinghao Guo</A>,
 			  <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
 			   <A href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</A>,
@@ -1728,65 +1740,171 @@ segmentation</b>
 <script type="text/javascript">
 (function () {
 	var categories = {
-		subtractive: [
+		learning: [
+			"from orbit to ground",
+			"deepmill++: neural guidance meets rasterization",		
+			"deepmill: neural accessibility learning",
+			"recovering 3d shapes",
+			"rich and cross-fused",	
+			"mind:",
+		    "neural field-based"
+		],
+		geoprocess: [
+			"deepmill++: neural guidance meets rasterization",
+			"chapper: carvable hull-and-pack",
+			"deepmill: neural accessibility learning",
+			"manifold k-nn",
+			"an algorithm for visibility computation"
+		],
+		georecon: [
+			"enhanced energy absorption",
+			"from orbit to ground",
+			"recovering 3d shapes",
+			"rich and cross-fused",
+			"fabrication-aware reverse engineering"
+		],
+		geogen: [
+			"mind:",
+			"printed perforated lampshades",
+			"strong 3d printing",
+			"shell thickening",
+			"computational design of knit templates",
+			"build-to-last"
+		],
+		spatplan: [
+			"chapper: carvable hull-and-pack",
+			"carving shapes with ruled surfaces",
+			"carvable packing of revolved 3d objects",
+			"vdac: volume decompose-and-carve",	
+			"waste-to-value",
+			"dhmp:",
+			"as-continuous-as-possible",
+			"vasco:",
+		    "neural field-based",
+			"dscarver: decompose-and-spiral-carve"			
+		],
+		pathplan: [
+			"continuous toolpath optimization",
+			"as-continuous-as-possible",
+			"a roadmap towards parallel printing",
+			"vdac: volume decompose-and-carve",	
+			"robotic jigsaws:",
+			"dscarver: decompose-and-spiral-carve",
+			"connected fermat spirals"
+		],
+		printing: [
+			"mind:",
+			"waste-to-value",
+			"vasco:",
+			"a roadmap towards parallel printing",
+			"as-continuous-as-possible",
+			"printed perforated lampshades",
+			"strong 3d printing",
+			"shell thickening",
+			"connected fermat spirals",
+			"build-to-last"
+		],
+		cnc: [
 			"deepmill++: neural guidance meets rasterization",
 			"chapper: carvable hull-and-pack",
 			"deepmill: neural accessibility learning",
 			"carving shapes with ruled surfaces",
 			"carvable packing of revolved 3d objects",
-			"continuous toolpath optimization",
-			"vdac: volume decompose-and-carve",
-			"dscarver: decompose-and-spiral-carve"
-		],
-		hybrid: [
-		    "neural field-based",
+			"vdac: volume decompose-and-carve",	
 			"waste-to-value",
 			"dhmp:",
-			"vasco:"
+			"vasco:",
+		    "neural field-based",
+			"dscarver: decompose-and-spiral-carve"
 		],
-		crafting: [
-			"tune-it:",
+		hybridfab: [
 			"wiresculptor:",
+			"tune-it:",
+			"waste-to-value",
+			"dhmp:",
+			"vasco:",
+		    "neural field-based"		
+		],
+		codesignfab: [
 			"co-optimization of design and fabrication plans",
-			"fabrication-aware reverse engineering",
-			"computational design of knit templates",
-			"robotic jigsaws:",
-			"carpentry compiler"
+			"carpentry compiler",
+			"computational design of knit templates"
 		],
-		additive: [
-		"enhanced energy absorption",
-			"as-continuous-as-possible",
-			"a roadmap towards parallel printing",
-			"shell thickening",
-			"strong 3d printing",
-			"connected fermat spirals",
-			"build-to-last"
+		dataset: [
+		    "neural field-based",
+			"dhmp:",
+			"mind:",
+			"deepmill++: neural guidance meets rasterization",
+			"deepmill: neural accessibility learning",			
 		],
-		geometry: [
+		wire: [
+			"wiresculptor:",
+			"tune-it:",	
+			"connected fermat spirals"			
+		],
+		carpentry: [
+			"fabrication-aware reverse engineering",			
+			"co-optimization of design and fabrication plans",
+			"carpentry compiler",			
+		],
+		voronoi: [
 			"manifold k-nn",
-			"rich and cross-fused",
-			"mind:"
+			"printed perforated lampshades",
+			"build-to-last",	
+			"variational circular treemaps",			
+			"an algorithm for visibility computation"		
 		],
-		vision: [
-			"from orbit to ground",
+		pack: [
+			"chapper: carvable hull-and-pack",
+			"carvable packing of revolved 3d objects",
+			"co-optimization of design and fabrication plans",
+			"carpentry compiler",			
+			"variational circular treemaps"		
+		],
+		decom: [
+			"carving shapes with ruled surfaces",
+			"vdac: volume decompose-and-carve",	
+			"waste-to-value",
+			"as-continuous-as-possible",
+			"vasco:",
+		    "neural field-based",
+			"dscarver: decompose-and-spiral-carve"				
+		],
+		robot: [
+			"a roadmap towards parallel printing",
+			"robotic jigsaws:"		
+		],
+		art: [
 			"recovering 3d shapes",
-			"fabrication-aware reverse engineering"
+			"wiresculptor:",
+			"tune-it:",	
+			"printed perforated lampshades",		
+			"variational circular treemaps"	
 		],
 		other: [
-			"printed perforated lampshades",
-			"variational circular treemaps",
-			"an algorithm for visibility computation",
 			"geometric research and application"
 		]
 	};
 	var labels = {
 		all: "All",
-		subtractive: "Subtractive Manufacturing / CNC",
-		hybrid: "Hybrid & Remanufacturing",
-		crafting: "Computational Carpentry & Crafting",
-		additive: "Additive Manufacturing / 3D Printing",
-		geometry: "Geometry Processing & Generation",
-		vision: "3D Reconstruction & Vision",
+		learning: "Deep Learning",
+		geoprocess: "Geometric Process",
+		georecon: "3D Reconstruction",
+		geogen: "3D Generation",
+		spatplan: "Spatial Planning",
+		pathplan: "Path Planning",
+		printing: "3D Printing",
+		cnc: "CNC Machining",
+		hybridfab: "Hybrid Manufacturing",
+		codesignfab: "Design‑Manufacturing Integration",
+		dataset: "Dataset Generation",
+		wire: "Single Line",
+		carpentry: "Carpentry",
+		voronoi: "Voronoi",
+		pack: "Packing",
+		decom: "Decomposition",
+		robot: "Robotics",
+		art: "Art",
 		other: "Others"
 	};
 	function normalize(text) {
