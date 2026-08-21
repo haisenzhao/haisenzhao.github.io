@@ -1,660 +1,324 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" class="wf-abel-n4-active wf-asul-n4-active wf-droidsansmono-n4-active wf-active"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Haisen Zhao's Homepage</title>
-<style type="text/css">
-<!--
-body {
-font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-background: #ffffff;
-margin: 0;
-padding: 0;
-color: #000;
-}
-body p {
-}
-/* ~~ Element/tag selectors ~~ */
-ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
-padding: 0;
-margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-margin-top: 0; /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
-padding-right: 15px;
-padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
-}
-a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
-border: none;
-}
-/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
-a:link {
-	color: rgba(0,0,0,1); /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
-}
-a:visited {
-	color: rgba(0,0,0,1);
-}
-a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
-	text-decoration: none;
-	text-align: left;
-	color: rgba(0,0,0,1);
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 100%;
-}
-/* ~~ this fixed width container surrounds all other elements ~~ */
-.container {
-	width: 960px;
-	background: #FFF;
-	margin-top: 0;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 0; /* the auto value on the sides, coupled with the width, centers the layout */
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-/* ~~ This is the layout information. ~~ 1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
-*/
-.content {
-padding: 10px 0;
-}
-/* ~~ miscellaneous float/clear classes ~~ */
-.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
-float: right;
-margin-left: 8px;
-}
-.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
-float: left;
-margin-right: 8px;
-}
-.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
-clear:both;
-height:0;
-font-size: 1px;
-line-height: 0px;
-}
-.auto-style3 {
-	text-align: left;
-	width: auto;
-	background-color: #CBCBCB;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	font-style: normal;
-	font-weight: 400;
-}
-.auto-style6 {
-	vertical-align: middle;
-}
-.auto-style7 {
-	color: #42413C;
-	text-decoration: underline;
-}
-.auto-style8 {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #FFFFFF;
-	color: rgba(0,0,0,1);
-}
-.auto-style9 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: medium;
-	color: #800000;
-}
-.auto-style10 {
-	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.auto-style11 {
-	color: #808080;
-}
-.auto-style12 {
-	margin-top: 0px;
-}
-.auto-style13 {
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.auto-style14 {
-	vertical-align: top;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.auto-style15 {
-	text-align: center;
-}
-.auto-style16 {
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.top-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	gap: 16px;
-	padding: 8px 15px 0 15px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.top-nav-links {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0 10px;
-}
-.top-nav-right {
-	flex-shrink: 0;
-	white-space: nowrap;
-}
-a:hover {
-	color: #6376E6;
-}
--->
-</style>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Haisen Zhao is a professor at Shandong University working on geometric computing for intelligent design and manufacturing.">
+  <meta name="author" content="Haisen Zhao">
+  <meta name="theme-color" content="#07172e">
+  <title>Haisen Zhao | Shandong University</title>
+  <link rel="canonical" href="https://haisenzhao.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Haisen Zhao">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:title" content="Haisen Zhao | Shandong University">
+  <meta property="og:description" content="Professor at Shandong University working on geometric computing for design and manufacturing.">
+  <meta property="og:url" content="https://haisenzhao.github.io/">
+  <meta property="og:image" content="https://haisenzhao.github.io/assets/images/og-haisen-zhao.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Haisen Zhao — Geometric Computing and Intelligent Manufacturing, Shandong University">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Haisen Zhao | Shandong University">
+  <meta name="twitter:description" content="Professor at Shandong University working on geometric computing for design and manufacturing.">
+  <meta name="twitter:image" content="https://haisenzhao.github.io/assets/images/og-haisen-zhao.png">
+  <meta name="twitter:image:alt" content="Haisen Zhao — Geometric Computing and Intelligent Manufacturing, Shandong University">
+  <link rel="preload" href="images/zhs/haisenzhao.jpg" as="image">
+  <link rel="stylesheet" href="assets/css/site.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Haisen Zhao",
+    "alternateName": "赵海森",
+    "url": "https://haisenzhao.github.io/",
+    "image": "https://haisenzhao.github.io/images/zhs/haisenzhao.jpg",
+    "jobTitle": "Professor of Computer Science",
+    "email": "mailto:haisenzhao@sdu.edu.cn",
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Shandong University",
+      "url": "https://www.en.sdu.edu.cn/"
+    },
+    "sameAs": [
+      "https://faculty.sdu.edu.cn/zhaohaisen/zh_CN/index.htm",
+      "https://scholar.google.com/citations?user=J3v_1GkAAAAJ",
+      "https://dblp.org/pid/148/8895.html",
+      "https://github.com/haisenzhao"
+    ],
+    "knowsAbout": [
+      "Geometric computing",
+      "Intelligent design",
+      "Manufacturability analysis",
+      "Computational fabrication",
+      "Additive and subtractive manufacturing"
+    ]
+  }
+  </script>
 </head>
 
-<body>
+<body class="home-page">
 <div class="container">
+  <header class="site-header">
+    <nav class="top-nav" aria-label="Primary navigation">
+      <div class="top-nav-links">
+        <a href="./index.html" aria-current="page">Home</a>
+        <a href="./publication.html">Publications</a>
+        <a href="./group.html">People</a>
+        <a href="./opensource.html">Software &amp; Data</a>
+      </div>
+      <div class="top-nav-right">
+        <a href="https://faculty.sdu.edu.cn/zhaohaisen/zh_CN/index.htm" lang="zh-CN">中文</a>
+      </div>
+    </nav>
+  </header>
 
+  <main>
+    <section class="hero" aria-labelledby="home-title">
+      <div class="hero-copy">
+        <h1 id="home-title">Haisen Zhao <span>| 赵海森</span></h1>
+        <p class="hero-position">Professor, School of Computer Science and Technology<br><a href="https://www.en.sdu.edu.cn/">Shandong University</a></p>
+        <p class="hero-summary">My research focuses on geometric computing for design and manufacturing, including manufacturability analysis, process and toolpath planning, microstructure design, and additive–subtractive hybrid manufacturing.</p>
 
-<div class="top-nav">
-  <div class="top-nav-links">
-	  <span>[<a href="./index.html" target="_parent" class="STYLE9">Home</a>]</span>
-	  <span>[<a href="./publication.html" target="_parent" class="STYLE9">Publications</a>]</span>
-	  <span>[<a href="./group.html" target="_parent" class="STYLE9">Group</a>]</span>
-	  <span>[<a href="./opensource.html" target="_parent" class="STYLE9">Open Source</a>]</span>
-  </div>
-  <div class="top-nav-right">
-	   <a href="https://faculty.sdu.edu.cn/zhaohaisen/zh_CN/index.htm" target="_parent" class="STYLE9">Chinese Version</a>
-  </div>
+        <p class="academic-links" aria-label="Academic profiles and resources">
+          <a href="./publication.html">Publications</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://scholar.google.com/citations?user=J3v_1GkAAAAJ&amp;hl=en">Google Scholar</a>
+          <span aria-hidden="true">·</span>
+          <a href="./Haisen_CV.pdf">CV</a>
+          <span aria-hidden="true">·</span>
+          <a href="https://github.com/haisenzhao">GitHub</a>
+        </p>
+
+        <p class="hero-meta">
+          <a href="https://irc.cs.sdu.edu.cn/">Interdisciplinary Research Center</a> · Qingdao, China<br>
+          haisenzhao [at] sdu.edu.cn
+        </p>
+      </div>
+
+      <figure class="hero-portrait">
+        <img class="profile-photo" src="images/zhs/haisenzhao.jpg" width="244" height="228" alt="Portrait of Haisen Zhao" decoding="async" fetchpriority="high">
+      </figure>
+    </section>
+
+    <section class="home-bio" lang="zh-CN" aria-labelledby="chinese-bio-heading">
+      <h2 id="chinese-bio-heading">中文简介</h2>
+      <p>赵海森，山东大学计算机科学与技术学院教授、博士生导师，山东大学杰出中青年人才、国家级青年人才。主要研究计算机图形学、数字几何设计，以及人工智能驱动的几何设计与制造。2018年获山东大学工学博士学位，导师为陈宝权教授；2019—2022年先后在美国华盛顿大学和奥地利科学技术研究所从事博士后研究，合作导师为 Adriana Schulz 教授和 Bernd Bickel 教授。</p>
+      <p>在 ACM TOG、ACM SIGGRAPH / SIGGRAPH Asia、IEEE TVCG、IROS 等期刊和会议发表多篇论文，出版专著1部，申请国家发明专利十余项和美国发明专利1项。主持国家自然科学基金优秀青年科学基金项目（海外）、国家重点研发计划课题、国家自然科学基金面上项目等，担任 CCF CAD&amp;CG 专委会等多个学术组织委员。曾获山东省自然科学奖一等奖、CCF 优秀博士学位论文奖等。</p>
+    </section>
+
+    <aside class="recruiting-note" aria-label="Prospective students and researchers">
+      <p><strong>Prospective students and researchers:</strong> I welcome inquiries from research interns, master’s and Ph.D. students, and postdoctoral researchers interested in geometric computing and intelligent manufacturing. <a href="mailto:haisenzhao@sdu.edu.cn">Email me</a>.</p>
+    </aside>
+
+    <section class="research-section" id="research" aria-labelledby="research-heading">
+      <div class="section-intro">
+        <h2 id="research-heading">Research</h2>
+        <p>My group studies computational methods across geometric design, analysis, and fabrication.</p>
+      </div>
+
+      <div class="research-grid">
+        <article class="research-area">
+          <h3>Geometric and Physical Intelligence</h3>
+          <p>Geometric learning, generative design, microstructures, and performance-driven optimization.</p>
+        </article>
+        <article class="research-area">
+          <h3>Manufacturability and Process Planning</h3>
+          <p>Accessibility analysis, decomposition, packing, process sequencing, and geometric verification.</p>
+        </article>
+        <article class="research-area">
+          <h3>Computational Fabrication</h3>
+          <p>Toolpath optimization, additive and subtractive manufacturing, hybrid manufacturing, and robotic fabrication.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="selected-work" id="selected-work" aria-labelledby="selected-work-heading">
+      <div class="section-intro section-intro-row">
+        <div>
+          <h2 id="selected-work-heading">Selected publications</h2>
+        </div>
+        <a class="section-link" href="./publication.html">Full publication list <span aria-hidden="true">→</span></a>
+      </div>
+
+      <div class="work-grid">
+        <article class="work-card">
+          <a class="work-image" href="https://zmzhang0.github.io/projects/Chapper/index.html" aria-label="Chapper project page">
+            <img src="images/chapper.jpg" alt="Chapper: carvable hull-and-pack for subtractive manufacturing" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">SIGGRAPH Asia 2025 · Journal Track</p>
+            <h3><a href="https://zmzhang0.github.io/projects/Chapper/index.html">Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing</a></h3>
+            <p>Jointly decomposes and packs shapes into carvable hulls for efficient subtractive manufacturing.</p>
+            <div class="work-links">
+              <a href="https://zmzhang0.github.io/projects/Chapper/index.html">Project</a>
+              <a href="https://github.com/zmzhang0/Chapper">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-image" href="https://fanchao98.github.io/DeepMill/deepmill.html" aria-label="DeepMill project page">
+            <img src="images/deepmill.png" alt="DeepMill neural accessibility learning for subtractive manufacturing" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">SIGGRAPH 2025 · Conference Track</p>
+            <h3><a href="https://fanchao98.github.io/DeepMill/deepmill.html">DeepMill: Neural Accessibility Learning for Subtractive Manufacturing</a></h3>
+            <p>Learns tool accessibility to efficiently analyze manufacturability for subtractive processes.</p>
+            <div class="work-links">
+              <a href="https://fanchao98.github.io/DeepMill/deepmill.html">Project</a>
+              <a href="https://github.com/fanchao98/DeepMill">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-image" href="https://github.com/TimHsue/MIND" aria-label="MIND source code">
+            <img src="images/MIND2.jpg" alt="MIND microstructure inverse design with a generative hybrid neural representation" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">SIGGRAPH 2025 · Conference Track</p>
+            <h3><a href="https://github.com/TimHsue/MIND">MIND: Microstructure INverse Design with Generative Hybrid Neural Representation</a></h3>
+            <p>Uses a generative hybrid neural representation for performance-driven inverse design of microstructures.</p>
+            <div class="work-links">
+              <a href="https://github.com/TimHsue/MIND">Code</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-image" href="./FourAxis/index.html" aria-label="Four-axis toolpath optimization project page">
+            <img src="images/FourAxis.png" alt="Continuous toolpath optimization for simultaneous four-axis subtractive manufacturing" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">Computer Graphics Forum · 2024</p>
+            <h3><a href="./FourAxis/index.html">Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing</a></h3>
+            <p>Optimizes continuous toolpaths for efficient and high-quality simultaneous four-axis machining.</p>
+            <div class="work-links">
+              <a href="./FourAxis/index.html">Project</a>
+              <a href="./FourAxis/files/four-axis.pdf">Paper</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-image" href="https://fanchao98.github.io/VASCO%20page/vasco.html" aria-label="VASCO project page">
+            <img src="images/vasco.png" alt="VASCO volume and surface co-decomposition for hybrid manufacturing" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">ACM TOG · SIGGRAPH Asia 2023</p>
+            <h3><a href="https://fanchao98.github.io/VASCO%20page/vasco.html">VASCO: Volume and Surface Co-Decomposition for Hybrid Manufacturing</a></h3>
+            <p>Co-decomposes volume and surface to plan additive–subtractive hybrid manufacturing.</p>
+            <div class="work-links">
+              <a href="https://fanchao98.github.io/VASCO%20page/vasco.html">Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-image" href="./CFS/index.html" aria-label="Connected Fermat Spirals project page">
+            <img src="images/spiral.jpg" alt="Connected Fermat Spirals for layered fabrication" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">ACM TOG · SIGGRAPH 2016</p>
+            <h3><a href="./CFS/index.html">Connected Fermat Spirals for Layered Fabrication</a></h3>
+            <p>Generates connected, low-curvature spiral paths for continuous layered fabrication.</p>
+            <div class="work-links">
+              <a href="./CFS/index.html">Project</a>
+              <a href="./paper/fermat_spirals.pdf">Paper</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="latest-news" id="news" aria-labelledby="news-heading">
+      <div class="section-intro">
+        <h2 id="news-heading">Recent news</h2>
+      </div>
+      <ol class="news-list">
+        <li>
+          <time datetime="2026-08-14">Aug. 14, 2026</time>
+          <p>Gave a talk entitled “Review of Frontier Hot Topics in Intelligent CAM” at <a href="https://cadcg2026.nju.edu.cn/?list_18/169.html">CAD/CG 2026</a>.</p>
+        </li>
+        <li>
+          <time datetime="2026-08-05">Aug. 5, 2026</time>
+          <p>One paper was accepted by <a href="https://pacificgraphics2026.github.io/">Pacific Graphics 2026</a>.</p>
+        </li>
+        <li>
+          <time datetime="2026-08-03">Aug. 3–5, 2026</time>
+          <p>Organized the <a href="https://github.com/cgpc2026/cgpc2026.github.io">CCF Graphics Rising-Star Summer Camp</a>, bringing together 20 graphics experts and 101 admitted students.</p>
+        </li>
+        <li>
+          <time datetime="2026-07-30">Jul. 30, 2026</time>
+          <p>Gave a talk entitled “Complex Geometric Computation for Subtractive Manufacturing” at <a href="https://www.imufe.edu.cn/gdc2026/info/1086/1286.htm">GDC 2026</a>.</p>
+        </li>
+        <li>
+          <time datetime="2026-07-03">Jul. 3, 2026</time>
+          <p>Congratulations to Ziyu Mu and Hanting Chen on receiving the Outstanding Undergraduate Thesis Award.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="academic-overview" id="about" aria-labelledby="about-heading">
+      <div class="section-intro">
+        <h2 id="about-heading">Academic background</h2>
+        <p class="about-lead">Haisen Zhao is a Professor at <a href="https://www.en.sdu.edu.cn/">Shandong University</a> and a member of the <a href="https://irc.cs.sdu.edu.cn/">Interdisciplinary Research Center</a>. He received his Ph.D. from Shandong University and conducted postdoctoral research at the University of Washington and IST Austria.</p>
+      </div>
+
+      <div class="overview-grid">
+        <article class="overview-card">
+          <h3>Selected Funding</h3>
+          <ul>
+            <li><strong>2025–2028</strong> National Natural Science Foundation of China, PI</li>
+            <li><strong>2024–2027</strong> National Key R&amp;D Program of China, PI</li>
+            <li><strong>2023–2025</strong> Science Fund Program for Excellent Young Scientists (Overseas), PI</li>
+          </ul>
+        </article>
+
+        <article class="overview-card">
+          <h3>Background</h3>
+          <ul>
+            <li><strong>2022–present</strong> Professor, Shandong University</li>
+            <li><strong>2021–2022</strong> Postdoctoral Researcher, IST Austria</li>
+            <li><strong>2019–2021</strong> Postdoctoral Researcher, University of Washington</li>
+          </ul>
+        </article>
+
+        <article class="overview-card">
+          <h3>Selected Recognition</h3>
+          <ul>
+            <li><strong>2020</strong> First Prize, Shandong Natural Science Award</li>
+            <li><strong>2019</strong> CCF Doctoral Dissertation Award</li>
+            <li><strong>2016</strong> President Scholarship, Shandong University</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="cv-note">A complete record of publications, teaching, funding, experience, and awards is available in the <a href="./Haisen_CV.pdf">full CV</a>.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Haisen Zhao</strong><br>
+      School of Computer Science and Technology, Shandong University
+    </div>
+    <div>
+      72 Binhai Ave., Jimo, Qingdao, China 266237<br>
+      Office 408 · haisenzhao [at] sdu.edu.cn
+    </div>
+  </footer>
 </div>
 
-
-
-
-
-<div>
-<table style="width: 100%; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellspacing="0" align="center" cellpadding="0">
-<tbody>
-<tr>
-<br>
-
-<td valign="baseline" style="vertical-align: middle;">
-<h1 style="text-align: left;" class="auto-style16">Haisen Zhao | 赵海森</h1>
-<div style="text-align: left;" class="auto-style8">Professor<br>
-Shandong University <br>
-Interdisciplinary Research Center <br>
-School of Computer Science and Technology <br> 
-72 Binhai Ave, Jimo, Qingdao, China, 266237 <br>
-Office: 408 <br>
-<span style="font-weight: normal;">Email: haisenzhao [at] gmail.com, haisenzhao [at] sdu.edu.cn  </span>
-
-<br>
-<br>
-
-<span style="color:red"> <strong> Recruiting research interns, master/Ph.D. candidates and postdoctors !!! </strong></span>
-
-</div>
-	</td>
-	<td valign="bottom" style="text-align: left; width: 148px;"><img src="images/zhs/haisenzhao.jpg" width="244" alt=""><br></td>
-</tr>
-</tbody>
-</table>
-
-
-<br>
-
-
-
-
-<h3 class="auto-style3"><strong style="font-family: Cambria, &#39;Hoefler Text&#39;, &#39;Liberation Serif&#39;, Times, &#39;Times New Roman&#39;, serif"><span style="">Bio </span><a name="Vita"></a></strong></h3>
-<tbody>
-<tr>
-<td>
-
-
-<p style="text-align: justify;" class="auto-style8">
-
-Haisen Zhao is a professor (<a href="Haisen_CV.pdf">CV</a>) of <a href="https://www.en.sdu.edu.cn/">Shandong University</a> (SDU). He is a member of the <a href="http://irc.cs.sdu.edu.cn/">Interdisciplinary Research Center</a>. His research interest lies at the geometric processing and its application for digital fabrication, including additive manufacturing and subtractive manufacturing. He completed his Ph.D. from Shandong University (2018) under the supervision of <a href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</a> and received Master's and Bachelor's degree in School of Computer Science and Technology and School of Software at Shandong University in 2014 and 2011, respectively. Haisen Zhao was a postdoctor at the University of Washington, as a member of the Computer Graphics Group (GRAIL), working with Prof. <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a> from 2019 to 2021. He was a postdoctor at the Institute of Science and Technology Austria (IST Austria), as a member of the Computer Graphics and Digital Fabrication Group, working with Prof. <a href="http://berndbickel.com/">Bernd Bickel</a> from 2021 to 2022. 
-</p>
-
-<p>
-赵海森，山东大学计算机学院教授，山东大学杰出中青年人才，国家级青年人才，博士生导师。主要研究方向为计算机图形学、数字几何设计，人工智能 驱动的几何设计与制造。2018年12月获得山东大学工学博士学位，导师为陈宝权教授。2019年至2022年分别在美国华盛顿大学和奥地利科学技术研究所从事博士后研究，导师为Adriana Schulz 教授和Bernd Bickel教授。曾在ACM Transactions on Graphics (TOG)、ACM SIGGRAPH/Asia、IEEE Transactions on Visualization and Graphics (TVCG)、IROS等顶级期刊或会议上发表论文十余篇，申请十余项国家发明专利和一项美国发明专利，出版专著1部。
-主持海外优青项目、重点研发计划课题、基金委面上项目等国家级科研项目。作为项目骨干，参与科技部新一代人工智能 (2030) 项目，基金委区域联合重点基金项目等项目。
-担任中国计算机学会CAD&CG专委会委员，中国工业与应用数学学会GDC专委会委员，中国图像图形学会青年工作委员会委员，中国图像图形学会三维视觉专委会委员，中国图像图形学会智能图形专委会委员，中国图学学会微观几何设计与制造专委会委员。
-获山东省自然科学奖一等奖、“CCF优秀博士学位论文奖”和“CAD&CG 2012优秀学生论文”等荣誉。
-</p>
-
-</td>
-</tr>
-</tbody>
-</table>
-
-
-
-
-
-
-<h3 class="auto-style3"><strong style="font-family: Cambria, &#39;Hoefler Text&#39;, &#39;Liberation Serif&#39;, Times, &#39;Times New Roman&#39;, serif"><span style="">News </span><a name="Experience"></a></strong></h3>
-
-<table style="width:100%;text-align: left;">
-
-
-   <tr>
- <td> <li style="margin-left: 20px;">Aug. 14, 2026: Given a talk entitled "Review of Frontier Hot Topics in Intelligent CAM" at <A href="https://cadcg2026.nju.edu.cn/?list_18/169.html">CAD/CG 2026</A>.</li></td>
- </tr>
- 
- 
- <tr>
- <td> <li style="margin-left: 20px;">Aug. 05, 2026: 1 paper accepted by <A href="https://pacificgraphics2026.github.io/">PG 2026</A>.</li></td>
- </tr>
- 
-
- 
-  <tr>
- <td> <li style="margin-left: 20px;">Aug. 03-05, 2026: <A href="https://github.com/cgpc2026/cgpc2026.github.io">CCF Graphics Rising-Star Summer Camp</A> with 20 graphics experts and 101 admitted students.</li></td>
- </tr>
- 
-  
- 
-  <tr>
-
- <td> <li style="margin-left: 20px;">Jul. 30, 2026: Given a talk entitled "Complex Geometric Computation for Subtractive Manufacturing" at <A href="https://www.imufe.edu.cn/gdc2026/info/1086/1286.htm?_t=1787223896685">GDC 2026</A>.</li></td>
- </tr>
- 
- 
- 
- 
-  <tr>
- <td> <li style="margin-left: 20px;">Jul. 03, 2026:  Congrats to Ziyu and Hanting on being awarded the Outstanding Undergraduate Thesis Award.</li></td>
- </tr>
- 
- 
-
- 
- 
- 
-  <tr>
-
- <td> <li style="margin-left: 20px;">Jun. 12, 2026: 1 poster paper accepted by SGP 2026 and 1 paper accepted by Thin-Walled Structures.</li></td>
- </tr>
-
- 
-  <tr>
-   <td> <li style="margin-left: 20px;">May. 27, 2026: Congrats Fanchao graduated with a PhD, and Zhihao and Mingze awarded Master's degrees.</li></td>
- </tr>
- 
-
-
-
-  <tr>
-
- <td> <li style="margin-left: 20px;">Apr. 29, 2026: 2 paper accepted by <A href="https://s2026.siggraph.org/">ACM SIGGRAPH 2026</A>.</li></td>
- </tr>
- 
- 
-  <tr>
-
- <td> <li style="margin-left: 20px;">Apr. 02, 2026: Excellent Result Achieved in Mid-term Appointment Assessment.</li></td>
- </tr>
- 
-
- 
-  <tr>
-
- <td> <li style="margin-left: 20px;">Apr. 01, 2026: 1 paper accepted by CVPR Findings 2026.</li></td>
- </tr>
- 
-  <!--
- 
-
-  <tr>
-   <td> <li style="margin-left: 20px;">Jan. 06, 2026: 1 paper accepted by Engineering Applications of Artificial Intelligence.</li></td>
- </tr>
- 
-
-  <tr>
-   <td><li style="margin-left: 20px;">Nov. 12, 2025: Our <A href="https://zmzhang0.github.io/projects/Chapper/index.html">Chapper</A> paper is selected for the <A href="https://www.youtube.com/watch?v=ZI8kh0FKlMM">Technical Papers Trailer</A> of SIGGRAPH Asia 2025.</li></td>
- </tr>
- 
-
- 
-  <tr>
-   <td> <li style="margin-left: 20px;">Nov. 06, 2025: 1 paper accepted by 3DV 2026.</li></td>
- </tr>
- 
- 
- 
-  <tr>
-   <td> <li style="margin-left: 20px;">Sep. 03, 2025: invited to be a TPC member of SIGGRAPH 2026.</li></td>
- </tr>
- 
- 
-  <tr>
-   <td> <li style="margin-left: 20px;">Aug. 10, 2025: 2 papers conditionally accepted by SIGGRAPH Asia 2025.</li></td>
- </tr>
- 
-
- 
-
-  <tr>
-   <td> <li style="margin-left: 20px;">Aug. 06, 2025: Our Graphical Modles paper is <A href="https://www.sciencedirect.com/science/article/pii/S1524070325000293">online</A>.</li></td>
- </tr>
- 
- 
-
-  <tr>
-   <td> <li style="margin-left: 20px;">May. 15, 2025: Zhenmin will present our <A href="https://haisenzhao.github.io/FourAxis/index.html">CGF paper</A> at <A href="https://eg25.cs.ucl.ac.uk/main/home.html">Eurographics 2025</A>.</li></td>
- </tr>
- 
- 
-  <tr>
-   <td> <li style="margin-left: 20px;">Apr. 29, 2025: Congrats Fanchao for Winning President's Scholarship of SDU.</li></td>
- </tr>
- 
- 
-  <tr>
-   <td> <li style="margin-left: 20px;">Mar. 29, 2025: 2 papers conditionally accepted by SIGGRAPH 2025.</li></td>
- </tr>
- 
-    <tr>
-   <td> <li style="margin-left: 20px;">Feb. 28, 2025: invited to present at  <A href="http://www.asiagraphics.org/asiagraphics-workshop-on-intelligent-graphics/">Asiagraphics Workshop on Intelligent Graphics</A>.</li></td>
- </tr>
- 
-
-   <tr>
-   <td> <li style="margin-left: 20px;">Jan. 07, 2025: invited to present our   <A href="https://haisenzhao.github.io/FourAxis/index.html">CGF paper</A> at Eurographics 2025.</li></td>
- </tr>
- 
- 
-   <tr>
-   <td> <li style="margin-left: 20px;">Oct. 05, 2024: invited to be a TPC member of SIGGRAPH 2025.</li></td>
- </tr>
- 
- -->
- 
-</table>
- 
-<br>
-
-
-
-
-
-
-
-<h3 class="auto-style3">
-<strong style="font-family: Cambria, &#39;Hoefler Text&#39;, &#39;Liberation Serif&#39;, Times, &#39;Times New Roman&#39;, serif"><span style="">Grants</span>
-<a name="Grants"></a>
-</strong></h3>
-
-
-
-
-
-<table style="width:100%">
-
-<!--
-  <tr>
-    <td>2022</td>
-    <td>Distinguished Young Scholars of the National Natural Science Foundation of China (Overseas)</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
--->
-	
-  <tr>
-    <td>2025.01-2028.12</td>
-    <td>National Natural Science Foundation of China (No. 62472257) PI</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
-   <tr>
-    <td>2024.12-2027.11</td>
-    <td>National Key R&D Program of China  (No. 2024YFB3309502) PI</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
- 
-   <tr>
-    <td>2024.01-2027.12</td>
-    <td>National Natural Science Foundation of China (No. U23A20312) Participate</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
- 
-   <tr>
-    <td>2023.01-2025.12</td>
-    <td>Science Fund Program for Excellent Young Scientists (Overseas) PI</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
- 
-    <tr>
-    <td>2023.01-2025.12</td>
-    <td>National Key R&D Program of China (No. 2022ZD0160805), Participate</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
- 
-  <tr>
-      <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
-</table>
- 
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 class="auto-style3"><strong style="font-family: Cambria, &#39;Hoefler Text&#39;, &#39;Liberation Serif&#39;, Times, &#39;Times New Roman&#39;, serif"><span style="">Teaching </span><a name="Teaching"></a></strong></h3>
-
-<table style="width:100%">
-
-  <tr><td>2026, Spring-Summer, Undergraduation Thesis (Design), Undergraduates (7), sd01330120</td></tr>
-
-  <tr><td>2025, Autumn-Winter, Advanced Human-Computer Interaction Techniques, Graduates (58), 0470101</td></tr>
-  <tr><td>2025, Autumn-Winter, Human-Computer Interaction Techniques, Undergraduates (142), sd01331130</td></tr>
-  
-  <tr><td>2025, Spring-Summer, Undergraduation Thesis (Design), Undergraduates (10), sd01330120</td></tr>
-  <tr><td>2025, Spring-Summer, Computer Graphics, Undergraduates (77), sd013314500</td></tr>
-
-  <tr><td>2024, Autumn-Winter, Advanced Human-Computer Interaction Techniques, Graduates (40), 0470101</td></tr>
-  <tr><td>2024, Autumn-Winter, Foundations of Computer Science, Undergraduates (19),  sd03423700</td></tr>
-  <tr><td>2024, Autumn-Winter, Human-Computer Interaction Techniques, Undergraduates (127), sd01331130</td></tr>
-
-  <tr><td>2024, Spring-Summer, Undergraduation Thesis (Design), Undergraduates (6), sd01330120</td></tr>
-  <tr><td>2024, Spring-Summer, Computer Graphics, Undergraduates (96), sd013314500</td></tr>
-
-  <tr><td>2023, Autumn-Winter, Human-Computer Interaction Techniques, Undergraduates (118), sd01331130</td></tr>
-  
-  <tr><td>2023, Spring-Summer, Undergraduation Thesis (Design), Undergraduates (9), sd01330120</td></tr>	
-  <tr><td>2023, Spring-Summer, Computer Graphics, Undergraduates (115), sd013314500</td></tr>
-  
-  <tr>
- </tr>
- 
-
-      <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
-</table>
- 
-<br>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h3 class="auto-style3"><strong style="font-family: Cambria, &#39;Hoefler Text&#39;, &#39;Liberation Serif&#39;, Times, &#39;Times New Roman&#39;, serif"><span style="">Experience </span><a name="Experience"></a></strong></h3>
-
-<table style="width:100%">
-
- <tr>
-    <td>2022.11—now</td>
-    <td>Professor, Shandong University</td>
-  </tr>
-  <tr>
- </tr>
-	
-  <tr>
-    <td>2021.09—2022.09</td>
-    <td>Postdoctoral researcher, working with Prof. Bernd Bickel, IST Austria</td>
-  </tr>
-  <tr>
- </tr>
-	
-  <tr>
-    <td>2019.03—2021.08</td>
-    <td>Postdoctoral researcher, working with Prof. Adriana Schulz, University of Washington</td>
-  </tr>
-  <tr>
- </tr>
- 
-  <tr>
-    <td>2019.01—2019.02</td>
-    <td>Research Intern, working with Prof. Baoquan Chen, Peking University</td>
-  </tr>
-  <tr>
- </tr>
-  <tr>
-    <td>2014.09—2018.12</td>
-    <td>PhD candidate, advisor: Prof. Baoquan Chen, Shandong University</td>
-  </tr>
-  <tr>
- </tr>
-  <tr>
-    <td>2011.09—2014.07</td>
-    <td>Master candidate, Research Center of HCI&VR, Shandong University</td>
-  </tr>
-  <tr>
- </tr>
-  <tr>
-    <td>2007.09—2011.07</td>
-    <td>Bachelor candidate, Digital Media Technology, Shandong University</td>
-  </tr>
-  <tr>
-      <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
-</table>
- 
-<br>
-
-<h3 class="auto-style3"><strong style="font-family: Cambria, &#39;Hoefler Text&#39;, &#39;Liberation Serif&#39;, Times, &#39;Times New Roman&#39;, serif"><span style="">Honors and Awards </span><a name="Awards"></a></strong></h3>
-
-
-
-
-
-
-<table style="width:100%">
-
-<!--
-  <tr>
-    <td>2022</td>
-    <td>Distinguished Young Scholars of the National Natural Science Foundation of China (Overseas)</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
--->
-	
-  <tr>
-    <td>2020</td>
-    <td>First prize of Shandong Natural Science Award, Shandong Province</td>
-  </tr>
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
- 
- 
-  <tr>
-    <td>2019</td>
-    <td>Doctoral Dissertation Award, CCF</td>
-  </tr>
-  <tr>
- </tr>
- 
-  <tr>
-    <td>2018</td>
-    <td>Innovation Capacity Improvement Scholarship, Shandong University</td>
-  </tr>
-  <tr>
- </tr>
-  <tr>
-    <td>2017</td>
-    <td>Excellent Graduate Student Scholarship, Shandong University</td>
-  </tr>
-  <tr>
- </tr>
-  <tr>
-    <td>2016</td>
-    <td>President Scholarship, Shandong University</td>
-  </tr>
-  <tr>
- </tr>
-  <tr>
-    <td>2016</td>
-    <td>National Scholarship, Chinese Education Department</td>
-  </tr>
-  <tr>
-      <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
-</table>
- 
-<br>
-
-
-
-
-
-
-
-
-
-
-</div>
-</div>
-
-
-<!-- Default Statcounter code for Haisen HomePage https://haisenzhao.github.io/
--->
-<script type="text/javascript">
-var sc_project=13203600; 
-var sc_invisible=0; 
-var sc_security="c34e87b7"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
+<!-- Statcounter analytics -->
+<script>
+var sc_project=13203600;
+var sc_invisible=1;
+var sc_security="c34e87b7";
 </script>
-<noscript><div class="statcounter"><a title="Web Analytics"
-href="https://statcounter.com/" target="_blank"><img class="statcounter"
-src="https://c.statcounter.com/13203600/0/c34e87b7/0/" alt="Web Analytics"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-
-
+<script async src="https://www.statcounter.com/counter/counter.js"></script>
+<noscript><div class="statcounter"><img src="https://c.statcounter.com/13203600/0/c34e87b7/1/" alt=""></div></noscript>
 </body>
-
-
-
-
 </html>
