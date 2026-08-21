@@ -1503,7 +1503,7 @@ a.person-name:focus {
 }
 
 .home-page .hero {
-  grid-template-columns: minmax(0, 1fr) 210px;
+  grid-template-columns: minmax(0, 1fr) 245px;
   gap: clamp(38px, 6vw, 72px);
   align-items: start;
   padding: 56px 0 42px;
@@ -1569,7 +1569,7 @@ a.person-name:focus {
 }
 
 .home-page .hero-portrait .profile-photo {
-  width: 205px;
+  width: 240px;
   margin: 2px 0 0 auto;
   border: 1px solid #d6dce1;
   border-radius: 2px;
@@ -1578,17 +1578,23 @@ a.person-name:focus {
 
 .home-page .home-bio {
   max-width: 940px;
-  padding: 25px 0 28px;
+  padding: 0;
   border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
-.home-page .home-bio h2 {
-  margin: 0 0 13px;
+.home-page .home-bio summary {
+  padding: 14px 0;
   color: #263744;
   font-family: Georgia, "Times New Roman", "Noto Serif SC", serif;
-  font-size: 1.22rem;
+  font-size: 1.05rem;
   font-weight: 600;
   letter-spacing: 0;
+  cursor: pointer;
+}
+
+.home-page .home-bio[open] summary {
+  margin-bottom: 3px;
 }
 
 .home-page .home-bio p {
@@ -1601,6 +1607,7 @@ a.person-name:focus {
 
 .home-page .home-bio p + p {
   margin-top: 8px;
+  padding-bottom: 20px;
 }
 
 .recruiting-note {
@@ -1619,6 +1626,11 @@ a.person-name:focus {
 
 .recruiting-note strong {
   color: #253642;
+}
+
+.people-page .recruiting-note {
+  margin-top: -6px;
+  margin-bottom: 44px;
 }
 
 .home-page .research-section {
@@ -1772,7 +1784,7 @@ a.person-name:focus {
   }
 
   .home-page .hero-portrait .profile-photo {
-    width: 180px;
+    width: 205px;
     margin-left: 0;
   }
 
@@ -2070,4 +2082,124 @@ a.person-name:focus {
   .software-page .software-card-image img {
     height: 160px;
   }
+}
+
+/* News archive */
+.news-page-body .top-nav-links a,
+.news-page-body .top-nav-right a {
+  padding-right: 8px;
+  padding-left: 8px;
+  border-radius: 0;
+}
+
+.news-page-body .top-nav-links a:hover,
+.news-page-body .top-nav-right a:hover {
+  background: transparent;
+  text-decoration: underline;
+}
+
+.news-page-body .top-nav-links a[aria-current="page"] {
+  background: transparent;
+  box-shadow: inset 0 -1px 0 #334b61;
+}
+
+.news-page {
+  max-width: 960px;
+}
+
+.news-page .page-hero {
+  max-width: 760px;
+  padding: 52px 0 34px;
+}
+
+.news-page .page-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 600;
+  letter-spacing: -0.018em;
+}
+
+.news-page .page-hero p {
+  color: #53616d;
+}
+
+.news-page .news-list li {
+  padding: 15px 0;
+}
+
+.news-page .news-list time {
+  color: #596773;
+  font-weight: 600;
+}
+
+.news-archive {
+  margin-top: 18px;
+}
+
+.news-archive summary {
+  width: max-content;
+  color: var(--color-link);
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  cursor: pointer;
+  list-style: none;
+}
+
+.news-archive summary::-webkit-details-marker {
+  display: none;
+}
+
+.news-archive summary::after {
+  content: " ↓";
+  font-size: 0.82em;
+}
+
+.news-archive[open] summary {
+  margin-bottom: 18px;
+}
+
+.news-archive[open] summary::after {
+  content: " ↑";
+}
+
+.news-archive .less-label,
+.news-archive[open] .more-label {
+  display: none;
+}
+
+.news-archive[open] .less-label {
+  display: inline;
+}
+
+@media (max-width: 620px) {
+  .news-page .page-hero {
+    padding-top: 38px;
+  }
+}
+
+/* Consistent primary page titles */
+.home-page .hero h1,
+.news-page .page-hero h1,
+.publications-page .page-hero h1,
+.people-page .page-hero h1,
+.software-page .page-hero h1 {
+  font-family: Georgia, "Times New Roman", "Noto Serif SC", serif !important;
+  font-size: clamp(2.35rem, 4vw, 3.15rem);
+  font-weight: 600;
+  line-height: 1.08;
+  letter-spacing: -0.018em;
+}
+
+.publications-page .page-hero {
+  padding: 52px 0 32px;
+}
+
+.publications-page .page-text-links {
+  margin-top: 16px;
+  margin-bottom: 0;
+}
+
+.publications-page .publication-browser > .publication-legend {
+  margin: -8px 0 18px;
 }

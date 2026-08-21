@@ -64,8 +64,9 @@
     <nav class="top-nav" aria-label="Primary navigation">
       <div class="top-nav-links">
         <a href="./index.html" aria-current="page">Home</a>
+        <a href="./news.html">News</a>
         <a href="./publication.html">Publications</a>
-        <a href="./group.html">People</a>
+        <a href="./group.html">Team</a>
         <a href="./opensource.html">Software &amp; Data</a>
       </div>
       <div class="top-nav-right">
@@ -77,7 +78,7 @@
   <main>
     <section class="hero" aria-labelledby="home-title">
       <div class="hero-copy">
-        <h1 id="home-title">Haisen Zhao <span>| 赵海森</span></h1>
+        <h1 id="home-title">Haisen Zhao</h1>
         <p class="hero-position">Professor, School of Computer Science and Technology<br><a href="https://www.en.sdu.edu.cn/">Shandong University</a></p>
         <p class="hero-summary">My research focuses on geometric computing for design and manufacturing, including manufacturability analysis, process and toolpath planning, microstructure design, and additive–subtractive hybrid manufacturing.</p>
 
@@ -102,15 +103,11 @@
       </figure>
     </section>
 
-    <section class="home-bio" lang="zh-CN" aria-labelledby="chinese-bio-heading">
-      <h2 id="chinese-bio-heading">中文简介</h2>
+    <details class="home-bio" lang="zh-CN">
+      <summary>中文简介</summary>
       <p>赵海森，山东大学计算机科学与技术学院教授、博士生导师，山东大学杰出中青年人才、国家级青年人才。主要研究计算机图形学、数字几何设计，以及人工智能驱动的几何设计与制造。2018年获山东大学工学博士学位，导师为陈宝权教授；2019—2022年先后在美国华盛顿大学和奥地利科学技术研究所从事博士后研究，合作导师为 Adriana Schulz 教授和 Bernd Bickel 教授。</p>
       <p>在 ACM TOG、ACM SIGGRAPH / SIGGRAPH Asia、IEEE TVCG、IROS 等期刊和会议发表多篇论文，出版专著1部，申请国家发明专利十余项和美国发明专利1项。主持国家自然科学基金优秀青年科学基金项目（海外）、国家重点研发计划课题、国家自然科学基金面上项目等，担任 CCF CAD&amp;CG 专委会等多个学术组织委员。曾获山东省自然科学奖一等奖、CCF 优秀博士学位论文奖等。</p>
-    </section>
-
-    <aside class="recruiting-note" aria-label="Prospective students and researchers">
-      <p><strong>Prospective students and researchers:</strong> I welcome inquiries from research interns, master’s and Ph.D. students, and postdoctoral researchers interested in geometric computing and intelligent manufacturing. <a href="mailto:haisenzhao@sdu.edu.cn">Email me</a>.</p>
-    </aside>
+    </details>
 
     <section class="research-section" id="research" aria-labelledby="research-heading">
       <div class="section-intro">
@@ -120,7 +117,7 @@
 
       <div class="research-grid">
         <article class="research-area">
-          <h3>Geometric and Physical Intelligence</h3>
+          <h3>AI-Driven Geometric Design</h3>
           <p>Geometric learning, generative design, microstructures, and performance-driven optimization.</p>
         </article>
         <article class="research-area">
@@ -143,6 +140,20 @@
       </div>
 
       <div class="work-grid">
+        <article class="work-card">
+          <a class="work-image" href="https://fanchao98.github.io/DeepMill++/deepmill++.html" aria-label="DeepMill++ project page">
+            <img src="images/deepmill++.png" alt="DeepMill++ neural guidance and rasterization for accessibility analysis" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">SIGGRAPH 2026 · Conference Track</p>
+            <h3><a href="https://fanchao98.github.io/DeepMill++/deepmill++.html">DeepMill++: Neural Guidance Meets Rasterization for Efficient Accessibility Analysis</a></h3>
+            <p>Combines neural guidance with rasterization for efficient tool-accessibility analysis in subtractive manufacturing.</p>
+            <div class="work-links">
+              <a href="https://fanchao98.github.io/DeepMill++/deepmill++.html">Project</a>
+            </div>
+          </div>
+        </article>
+
         <article class="work-card">
           <a class="work-image" href="https://zmzhang0.github.io/projects/Chapper/index.html" aria-label="Chapper project page">
             <img src="images/chapper.jpg" alt="Chapper: carvable hull-and-pack for subtractive manufacturing" loading="lazy" decoding="async">
@@ -174,35 +185,6 @@
         </article>
 
         <article class="work-card">
-          <a class="work-image" href="https://github.com/TimHsue/MIND" aria-label="MIND source code">
-            <img src="images/MIND2.jpg" alt="MIND microstructure inverse design with a generative hybrid neural representation" loading="lazy" decoding="async">
-          </a>
-          <div class="work-copy">
-            <p class="work-venue">SIGGRAPH 2025 · Conference Track</p>
-            <h3><a href="https://github.com/TimHsue/MIND">MIND: Microstructure INverse Design with Generative Hybrid Neural Representation</a></h3>
-            <p>Uses a generative hybrid neural representation for performance-driven inverse design of microstructures.</p>
-            <div class="work-links">
-              <a href="https://github.com/TimHsue/MIND">Code</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
-          <a class="work-image" href="./FourAxis/index.html" aria-label="Four-axis toolpath optimization project page">
-            <img src="images/FourAxis.png" alt="Continuous toolpath optimization for simultaneous four-axis subtractive manufacturing" loading="lazy" decoding="async">
-          </a>
-          <div class="work-copy">
-            <p class="work-venue">Computer Graphics Forum · 2024</p>
-            <h3><a href="./FourAxis/index.html">Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing</a></h3>
-            <p>Optimizes continuous toolpaths for efficient and high-quality simultaneous four-axis machining.</p>
-            <div class="work-links">
-              <a href="./FourAxis/index.html">Project</a>
-              <a href="./FourAxis/files/four-axis.pdf">Paper</a>
-            </div>
-          </div>
-        </article>
-
-        <article class="work-card">
           <a class="work-image" href="https://fanchao98.github.io/VASCO%20page/vasco.html" aria-label="VASCO project page">
             <img src="images/vasco.png" alt="VASCO volume and surface co-decomposition for hybrid manufacturing" loading="lazy" decoding="async">
           </a>
@@ -212,6 +194,20 @@
             <p>Co-decomposes volume and surface to plan additive–subtractive hybrid manufacturing.</p>
             <div class="work-links">
               <a href="https://fanchao98.github.io/VASCO%20page/vasco.html">Project</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="work-card">
+          <a class="work-image" href="https://github.com/TimHsue/MIND" aria-label="MIND source code">
+            <img src="images/MIND2.jpg" alt="MIND microstructure inverse design with a generative hybrid neural representation" loading="lazy" decoding="async">
+          </a>
+          <div class="work-copy">
+            <p class="work-venue">SIGGRAPH 2025 · Conference Track</p>
+            <h3><a href="https://github.com/TimHsue/MIND">MIND: Microstructure INverse Design with Generative Hybrid Neural Representation</a></h3>
+            <p>Uses a generative hybrid neural representation for performance-driven inverse design of microstructures.</p>
+            <div class="work-links">
+              <a href="https://github.com/TimHsue/MIND">Code</a>
             </div>
           </div>
         </article>
@@ -231,34 +227,6 @@
           </div>
         </article>
       </div>
-    </section>
-
-    <section class="latest-news" id="news" aria-labelledby="news-heading">
-      <div class="section-intro">
-        <h2 id="news-heading">Recent news</h2>
-      </div>
-      <ol class="news-list">
-        <li>
-          <time datetime="2026-08-14">Aug. 14, 2026</time>
-          <p>Gave a talk entitled “Review of Frontier Hot Topics in Intelligent CAM” at <a href="https://cadcg2026.nju.edu.cn/?list_18/169.html">CAD/CG 2026</a>.</p>
-        </li>
-        <li>
-          <time datetime="2026-08-05">Aug. 5, 2026</time>
-          <p>One paper was accepted by <a href="https://pacificgraphics2026.github.io/">Pacific Graphics 2026</a>.</p>
-        </li>
-        <li>
-          <time datetime="2026-08-03">Aug. 3–5, 2026</time>
-          <p>Organized the <a href="https://github.com/cgpc2026/cgpc2026.github.io">CCF Graphics Rising-Star Summer Camp</a>, bringing together 20 graphics experts and 101 admitted students.</p>
-        </li>
-        <li>
-          <time datetime="2026-07-30">Jul. 30, 2026</time>
-          <p>Gave a talk entitled “Complex Geometric Computation for Subtractive Manufacturing” at <a href="https://www.imufe.edu.cn/gdc2026/info/1086/1286.htm">GDC 2026</a>.</p>
-        </li>
-        <li>
-          <time datetime="2026-07-03">Jul. 3, 2026</time>
-          <p>Congratulations to Ziyu Mu and Hanting Chen on receiving the Outstanding Undergraduate Thesis Award.</p>
-        </li>
-      </ol>
     </section>
 
     <section class="academic-overview" id="about" aria-labelledby="about-heading">
