@@ -22,215 +22,6 @@
 <meta name="twitter:description" content="Publications in geometric computing, intelligent design, manufacturability analysis, and computational fabrication.">
 <meta name="twitter:image" content="https://haisenzhao.github.io/assets/images/og-haisen-zhao.png">
 <meta name="twitter:image:alt" content="Haisen Zhao — Geometric Computing and Intelligent Manufacturing, Shandong University">
-<style type="text/css">
-<!--
-body {
-font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
-background: #ffffff;
-margin: 0;
-padding: 0;
-color: #000;
-}
-body p {
-}
-/* ~~ Element/tag selectors ~~ */
-ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
-padding: 0;
-margin: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
-margin-top: 0; /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
-padding-right: 15px;
-padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
-}
-a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
-border: none;
-}
-/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
-a:link {
-	color: rgba(0,0,0,1); /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
-}
-a:visited {
-	color: rgba(0,0,0,1);
-}
-a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
-	text-decoration: none;
-	text-align: left;
-	color: rgba(0,0,0,1);
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 100%;
-}
-/* ~~ this fixed width container surrounds all other elements ~~ */
-.container {
-	width: 960px;
-	background: #FFF;
-	margin-top: 0;
-	margin-right: auto;
-	margin-left: auto;
-	margin-bottom: 0; /* the auto value on the sides, coupled with the width, centers the layout */
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-}
-/* ~~ This is the layout information. ~~ 1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
-*/
-.content {
-padding: 10px 0;
-}
-/* ~~ miscellaneous float/clear classes ~~ */
-.fltrt { /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
-float: right;
-margin-left: 8px;
-}
-.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
-float: left;
-margin-right: 8px;
-}
-.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the overflow:hidden on the .container is removed */
-clear:both;
-height:0;
-font-size: 1px;
-line-height: 0px;
-}
-.auto-style3 {
-	text-align: left;
-	width: auto;
-	background-color: #CBCBCB;
-	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", serif;
-	font-style: normal;
-	font-weight: 400;
-}
-.auto-style6 {
-	vertical-align: middle;
-}
-.auto-style7 {
-	color: #42413C;
-	text-decoration: underline;
-}
-.auto-style8 {
-	font-family: Arial, Helvetica, sans-serif;
-	background-color: #FFFFFF;
-	color: rgba(0,0,0,1);
-}
-.auto-style9 {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: medium;
-	color: #800000;
-}
-.auto-style10 {
-	text-align: center;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.auto-style11 {
-	color: #808080;
-}
-.auto-style12 {
-	margin-top: 0px;
-}
-.auto-style13 {
-	text-align: left;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.auto-style14 {
-	vertical-align: top;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.auto-style15 {
-	text-align: center;
-}
-.auto-style16 {
-	font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-}
-.top-nav {
-	display: flex;
-	justify-content: space-between;
-	align-items: flex-start;
-	gap: 16px;
-	padding: 8px 15px 0 15px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.top-nav-links {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 0 10px;
-}
-.top-nav-right {
-	flex-shrink: 0;
-	white-space: nowrap;
-}
-a:hover {
-	color: #6376E6;
-}
-.publication-list {
-	border-collapse: separate;
-	border-spacing: 0 6px;
-}
-.publication-list td[colspan="2"] {
-	height: 0;
-	line-height: 0;
-	padding: 0;
-}
-.publication-list td:first-child:not([colspan]) {
-	width: 250px;
-	min-width: 250px;
-	max-width: 250px;
-	text-align: center !important;
-	vertical-align: top !important;
-	padding: 0 20px 0 0;
-}
-.publication-list td:first-child:not([colspan]) img {
-	display: block;
-	width: 225px !important;
-	height: 120px !important;
-	object-fit: contain;
-	box-sizing: border-box;
-	margin: 0 auto;
-	padding: 10px 12px;
-	background: #fff;
-	box-shadow: 0 2px 8px rgba(0,0,0,0.14);
-}
-.publication-list td:nth-child(2) {
-	vertical-align: top !important;
-	padding: 0;
-}
-.publication-filter {
-	margin: 0 15px 14px 15px;
-	font-family: Arial, Helvetica, sans-serif;
-}
-.publication-filter-label {
-	margin-bottom: 6px;
-	color: #42413C;
-	font-weight: bold;
-}
-.publication-filter-controls {
-	display: flex;
-	flex-wrap: wrap;
-	gap: 6px 8px;
-}
-.publication-filter button {
-	border: 1px solid #222;
-	border-radius: 999px;
-	background: #fff;
-	color: #000;
-	cursor: pointer;
-	font: 85% Arial, Helvetica, sans-serif;
-	line-height: 1.2;
-	padding: 4px 13px;
-}
-.publication-filter button:hover {
-	background: #f2f2f2;
-}
-.publication-filter button.active,
-.publication-filter button.active:hover {
-	background: #222;
-	border-color: #222;
-	color: #fff;
-}
-.publication-filter-status {
-	color: #666;
-	font-size: 80%;
-	margin-top: 6px;
-}
--->
-</style>
 <link rel="stylesheet" href="assets/css/site.css">
 </head>
 
@@ -258,7 +49,7 @@ a:hover {
 <main class="publications-page">
 <header class="page-hero" aria-labelledby="publications-title">
   <h1 id="publications-title">Publications</h1>
-  <p>Research spanning geometric computing, intelligent design, manufacturability analysis, and computational fabrication.</p>
+  <p>Research spanning geometric computing, intelligent design, manufacturability analysis, and computational fabrication. (<strong>Haisen Zhao</strong> is highlighted in each author list. * Corresponding author.)</p>
   <p class="page-text-links" aria-label="Publication profiles">
     <a href="https://scholar.google.com/citations?user=J3v_1GkAAAAJ&amp;hl=en">Google Scholar</a>
     <span aria-hidden="true">·</span>
@@ -300,1373 +91,580 @@ a:hover {
       <button type="button" data-filter="other" aria-pressed="false">Others</button>
     </div>
   </details>
-  <div class="publication-filter-status" id="publication-filter-status"></div>
+  <div class="publication-filter-status" id="publication-filter-status" role="status" aria-live="polite"></div>
 </div>
 
-<p class="publication-legend"><strong>Haisen Zhao</strong> is highlighted in each author list. * Corresponding author.</p>
-
-<table class="publication-list" style="width: 100%; height: 173px; text-align: left; margin-left: auto; margin-right: auto;" border="0" cellpadding="2" cellspacing="2"><tbody>
-
-
-
-
- <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2026</span>
-</div></td>
-          </tr>
-
-
-
-
-
-
- <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Neural Field-Based Sequence Planning for Additive-Subtractive Hybrid Manufacturing" src="images/shudanpaper.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Neural Field-Based Sequence Planning for Additive-Subtractive Hybrid Manufacturing</b></div>
-              Shudan Guo,
-              <A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-			   Liyuan Wang,
-			  <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>
-               <br>
-              </span>
-             Eurographics Symposium on Geometry Processing (SGP) 2026, Poster track
-              <br>
-              </span>
-    </div>  
-    </td>
-
-
-
-
-
-
-
-
-<tr>
-  <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-</tr>
-<tr>
-  <td style="text-align: center; vertical-align: middle;">
-    <img alt="Enhanced Energy Absorption in Re-Entrant Honeycombs via Elliptical Double-Arrow Hybrid Design" src="images/tws2026.png" width="380" loading="lazy" decoding="async"><br>
-  </td>
-
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-    <div class="auto-style6" style="text-align: justify;">
-      <span class="auto-style8">
-
-        <div style="color:SlateBlue;">
-          <b>Enhanced Energy Absorption in Re-Entrant Honeycombs via Elliptical Double-Arrow Hybrid Design</b>
-          <span style="color: rgba(0,0,0,1)">[<a
-              href="https://www.sciencedirect.com/science/article/pii/S0263823126007767?dgcid=coauthor">Paper</a>]</span>
+<div class="publication-years">
+  <section class="publication-year" id="year-2026" data-year="2026" aria-labelledby="year-2026-heading">
+    <h2 id="year-2026-heading">2026</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="geoprocess voronoi" data-priority="0">
+        <a class="publication-image" href="https://github.com/sssomeone/manifold-knn" aria-label="Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds">
+          <img src="images/EarthTime.png" alt="Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://github.com/sssomeone/manifold-knn">Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://github.com/sssomeone/manifold-knn">Project</a>
+          </div>
+          <p class="publication-summary">Accelerates nearest-neighbor queries on manifold point clouds through geometry-aware search.</p>
+          <p class="publication-authors"><a href="https://pengfei.me/">Pengfei Wang</a>, Qinghao Guo, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</a>, <a href="https://xk.qust.edu.cn/info/1041/4695.htm">Shuangmin Chen</a>, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html">Wenping Wang</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · ACM SIGGRAPH 2026, Journal Track</p>
         </div>
-
-      </span>
-        Wenpeng Xu,
-        Dongxia Wang,
-        Jinglong Zhang,
-        Jiahe Hu,
-        <A href="https://haoxu99.github.io/">Hao Xu</A>,
-        Liuchao Jin,
-        Haitao Ye,
-        <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-        Wei-Hsin Liao
-        <br>
-      Thin-Walled Structures, 2026
-      <br>
-    </div>
-  </td>
-</tr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds" src="images/EarthTime.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Manifold k-NN: Accelerated k-NN Queries for Manifold Point Clouds</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://github.com/sssomeone/manifold-knn">Project
-                        page</a>]</span>
-                </span>
-              </div>
-              <A href="https://pengfei.me/">Pengfei Wang</A>, 
-              Qinghao Guo,
-			  <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-			   <A href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</A>,
-              <A href="https://xk.qust.edu.cn/info/1041/4695.htm">Shuangmin Chen</A>,
-			    <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-			  <A href="https://engineering.tamu.edu/cse/profiles/Wang-Wenping.html">Wenping Wang</A>
-               <br>
-             ACM SIGGRAPH 2026, Journal track
-              <br>
-              </span>
-    </div>  
-    </td>
-	
-	
-	
-	
-	
-	
-
- <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="DeepMill++: Neural Guidance Meets Rasterization for Efficient Accessibility Analysis" src="images/deepmill++.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>DeepMill++: Neural Guidance Meets Rasterization for Efficient Accessibility Analysis</b>
-                    <span style="color: rgba(0,0,0,1)">[<a href="https://fanchao98.github.io/DeepMill++/deepmill++.html">Project page</a>]</span>
-                  </div>
-
-              <A href="https://fanchao98.github.io/">Fanchao Zhong</A>, 
-              <A href="https://yaozhang-666.github.io/">Yao Zhang</A>,
-			  Guanze Xin,
-              <A href="https://wang-ps.github.io/">Peng-Shuai Wang</A>,
-			  <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</A>,
-			  <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>  <br>
-              </span>
-             ACM SIGGRAPH 2026, Conference track
-              <br>
-              </span>
-    </div>  
-    </td>
-
-
-
-
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images" src="images/2026-orbit.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://pku-vcl-geometry.github.io/Orbit2Ground/">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-<A href="https://maxmilite.github.io/">Fei Yu</A>,
-<A href="https://scholar.google.com/citations?user=XchgHFoAAAAJ">Yu Liu</A>,
-<A href="https://scholar.google.com/citations?user=2A1sp-wAAAAJ">Luyang Tang</A>,
-<A href="https://scholar.google.com/citations?user=bqsITKQAAAAJ">Mingchao Sun</A>,
-<A href="https://github.com/boolwater">Zengye Ge</A>,
-<A href="https://scholar.google.com/citations?user=YMRzlkMAAAAJ">Rui Bu</A>,
-Yuchao Jin,
-<A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-<A href="https://ai4scientificimaging.org/">He Sun</A>,
-<A href="https://yangyan.li/">Yangyan Li</A>,
-<A href="https://scholar.google.com/citations?user=JGi4S0EAAAAJ">Mu Xu</A>,
-<A href="https://wenzhengchen.github.io/">Wenzheng Chen</A>,
-<A href="http://baoquanchen.info/">Baoquan Chen</A>
-			  <br>
-              </span>
-			  CVPR 2026 Findings
-              <br>
-              </span>
-    </div>
-    </td>
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Rich and Cross-Fused Feature Embedding for Few-Shot Point Cloud Semantic Segmentation" src="images/rich.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Rich and cross-fused feature embedding for few-shot point cloud semantic
-segmentation</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://www.sciencedirect.com/science/article/abs/pii/S095219762600031X">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-             Yuyun Wei,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-              Jia Cui,
-			  <A href="https://scholar.google.com/citations?user=A_K6bhAAAAAJ&amp;hl=en">Meng Qi</A> <br>
-              </span>
-			  Engineering Applications of Artificial Intelligence 2026
-              <br>
-              </span>
-    </div>
-    </td>
-	
-	
-	
-	
-	
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Recovering 3D Shapes from Ultra-Fast Motion-Blurred Images" src="images/blur1.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Recovering 3D Shapes from Ultra-Fast Motion-Blurred Images</b></div>
-             <A href="https://maxmilite.github.io/">Fei Yu</A>,
-           Shudan Guo,
-              <A href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</A>,
-              <A href="https://wangningbei.github.io/">Beibei Wang</A>,
-			     <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>,
-			  <A href="https://wenzhengchen.github.io/">Wenzheng Chen</A>
-			  <br>
-              </span>
-			  3DV 2026 Conference
-              <br>
-              </span>
-    </div>
-    </td>
-	
-	
- <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2025</span>
-</div></td>
-          </tr>
-	
-	
-	
-	
-	
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="DHMP: A Large 3D Model Dataset for Hybrid Manufacturing Process Planning" src="images/DHMP.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>DHMP: A Large 3D Model Dataset for Hybrid Manufacturing Process Planning</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://www.jcad.cn/article/doi/10.3724/SP.J.1089.2025-00211">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-			   Liyuan Wang,
-             <A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-			  <A href="https://manyili12345.github.io/">Manyi Li</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A><br>
-              </span>
-			  Journal of Computer-Aided Design &amp; Computer Graphics, 2025<br>(in Chinese)
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-
-	
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Waste-to-Value: Reutilized Material Maximization for Additive and Subtractive Hybrid Remanufacturing" src="images/refab.jpg" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Waste-to-Value: Reutilized Material Maximization for Additive and Subtractive Hybrid Remanufacturing</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://fanchao98.github.io/Refab%20page/refab.html">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-             <A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-              <A href="https://zmzhang0.github.io/">Zhenmin Zhang</A>,
-              Liyuan Wang,
-			  <A href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</A>,
-			  Jikai Liu,
-			  <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A><br>
-              </span>
-			  ACM SIGGRAPH Asia 2025 (journal track)
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing" src="images/chapper.jpg" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://zmzhang0.github.io/projects/Chapper/index.html">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-       
-              <A href="https://zmzhang0.github.io/">Zhenmin Zhang</A>, 
-              Shuai Feng,
-			  <A href="https://haoxu99.github.io/">Hao Xu</A>,
-			  Lujiaoyang Fu,
-			  <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</A>,
-			  <A href="https://jianweiguo.net/">Jianwei Guo</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A> <br>
-              </span>
-			  ACM SIGGRAPH Asia 2025 (journal track)
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Carvable Packing of Revolved 3D Objects for Subtractive Manufacturing" src="images/pack2d.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Carvable packing of revolved 3D objects for subtractive manufacturing</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://www.sciencedirect.com/science/article/pii/S1524070325000293">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-
-              Chengdong Wei,
-              Shuai Feng,
-              <A href="https://haoxu99.github.io/">Hao Xu</A>,
-			  Qidong Zhang,
-			  Songyang Zhang,
-			  Zongzhen Li,
-			  <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>  <br>
-              </span>
-			  Graphical Models 2025<br>
-              Special issue of <A href="https://www.sciencedirect.com/special-issue/311602/geometric-modeling-for-multi-axis-additive-and-subtractive-manufacturing">VSI: Add-and-Sub Manufacturing</A>
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="DeepMill: Neural Accessibility Learning for Subtractive Manufacturing" src="images/deepmill.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>DeepMill: Neural Accessibility Learning for Subtractive Manufacturing</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://fanchao98.github.io/DeepMill/deepmill.html">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-
-              <A href="https://fanchao98.github.io/">Fanchao Zhong</A>, 
-              Yang Wang,
-              <A href="https://wang-ps.github.io/">Peng-Shuai Wang</A>,
-			  <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>  <br>
-              </span>
-             ACM SIGGRAPH 2025, Conference track
-              <br>
-              </span>
-    </div>  
-    </td>
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="MIND: Microstructure INverse Design with Generative Hybrid Neural Representation" src="images/MIND2.jpg" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>MIND: Microstructure INverse Design with Generative Hybrid Neural Representation</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://github.com/TimHsue/MIND">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-
-              <A href="https://timhsue.github.io/">Tianyang Xue</A>,
-              Longdu Liu,
-			  <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu*</A>,
-              <A href="https://www.pmh47.net/">Paul Henderson</A>,
-			  <A href="https://tangpengbin.github.io/">Pengbin Tang</A>,
-			  Haochen Li,
-			  Jikai Liu,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-			  <A href="https://penghao94.github.io/">Hao Peng</A>,
-			  <A href="https://berndbickel.com/about-me">Bernd Bickel</A>  <br>
-              </span>
-             ACM SIGGRAPH 2025, Conference track
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Carving Shapes with Ruled Surfaces for Rough Machining" src="images/2025-Carving.png" width="300" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Carving Shapes with Ruled Surfaces for Rough Machining</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5325965">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-			  Zheng Zhang,
-			  Yifei Li,
-			  Kang Wu,
-			  <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-			  Xu Liu,
-			  Xiang Wang,
-			  <A href="http://staff.ustc.edu.cn/~lgliu/">Ligang Liu</A>,
-			  <A href="http://staff.ustc.edu.cn/~fuxm/">Xiao-Ming Fu</A>
-			  <br>
-              </span>
-             Computers &amp; Graphics, 2025
-              <br>
-              </span>
-    </div>
-    </td>
-	
-	
-
-
-    <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="WireSculptor: Interactive Guided Bending Workflow for Novice-Friendly Wire Sculpture Fabrication" src="images/wiresculptor.png" width="390" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>WireSculptor: Interactive Guided Bending Workflow for Novice-Friendly Wire Sculpture Fabrication</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="https://link.springer.com/chapter/10.1007/978-981-95-7195-6_5">Project page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-                  <span style="color: rgba(0,0,0,1)">[<a href="paper/WireSculptor_ICXR2025.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-                  </div>
-			  Runze Xue,
-	<A href="https://maxmilite.github.io/">Fei Yu</A>,
-			  Baohang Zhou,
-			  Jialu Wang,
-			  <A href="https://cvfzhong.github.io/">Fan Zhong</A>,
-			  <A href="https://qiongzn.github.io/">Qiong Zeng</A>,
-        <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>
-			  <br>
-              </span>
-              ICXR, 2025
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-
-
-
-
-
-
- <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2024</span>
-</div></td>
-          </tr>
-	
-
-
-
-
-
-
-
-
-      <tr>
-            <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-          </tr>
-          <tr>
-            <td style="text-align: center; vertical-align: middle;">
-              <img alt="Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing" src="images/Tuneit.png" width="380" loading="lazy" decoding="async"><br>
-            </td>
-     <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-              <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-                  <div style="color:SlateBlue;"><b>Tune-It: Optimizing Wire Reconfiguration for Sculpture
-                      Manufacturing</b>
-                    <span style="color: rgba(0,0,0,1)">[<a
-                        href="TuneIt/index.html">Project
-                        page</a>]</span>
-                </span><span style="color: rgb(204, 51, 204);">
-              </div>
-
-              <A href="https://qibingwu.github.io/">Qibing Wu</A>, 
-              Zhihao Zhang,
-              <A href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</A>,
-              <A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-              Yueze Zhu,
-              Xurong Lu,
-              Runze Xue,
-              Rui Li,
-              <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-              <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>  <br>
-              </span>
-             ACM SIGGRAPH Asia 2024, Conference track
-              <br>
-              </span>
-    </div>
-    </td>
-
-
-
-    <tr>
-      <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-    <tr>
-      <td style="text-align: center; vertical-align: middle;">
-        <img alt="Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing" src="images/FourAxis.png" width="380" loading="lazy" decoding="async"><br>
-      </td>
-      <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-        <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-            <div style="color:SlateBlue;"><b>Continuous Toolpath Optimization for Simultaneous Four-Axis
-                Subtractive Manufacturing</b>
-              <span style="color: rgba(0,0,0,1)">[<a href="FourAxis/index.html">Project
-                  page</a>]</span>
-          </span><span style="color: rgb(204, 51, 204);">
+      </article>
+      <article class="publication-item" data-categories="learning geoprocess cnc analysis dataset" data-priority="0">
+        <a class="publication-image" href="https://fanchao98.github.io/DeepMill++/deepmill++.html" aria-label="DeepMill++: Neural Guidance Meets Rasterization for Efficient Accessibility Analysis">
+          <img src="images/deepmill++.png" alt="DeepMill++: Neural Guidance Meets Rasterization for Efficient Accessibility Analysis" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://fanchao98.github.io/DeepMill++/deepmill++.html">DeepMill++: Neural Guidance Meets Rasterization for Efficient Accessibility Analysis</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://fanchao98.github.io/DeepMill++/deepmill++.html">Project</a>
+          </div>
+          <p class="publication-summary">Combines neural guidance with rasterization for efficient tool-accessibility analysis in subtractive manufacturing.</p>
+          <p class="publication-authors"><a href="https://fanchao98.github.io/">Fanchao Zhong</a>, <a href="https://yaozhang-666.github.io/">Yao Zhang</a>, Guanze Xin, <a href="https://wang-ps.github.io/">Peng-Shuai Wang</a>, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a>, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue">ACM SIGGRAPH 2026 · Conference Track</p>
         </div>
-        <A href="https://zmzhang0.github.io/">Zhenmin Zhang</A>,
-        Zihan Shi,
-        <A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-        Kun Zhang,
-        Wenjing Zhang,
-        Jianwei Guo,
-        <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-        <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>  <br>
-        </span>
-        Computer Graphics Forum, 2024
-        <br>
-        </span>
-  </div>
-  </td>
-
-
-
-
-
- <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2023</span>
-</div></td>
-          </tr>
-	
-
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="VASCO: Volume and Surface Co-Decomposition for Hybrid Manufacturing" src="images/vasco.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-    <div style="color:SlateBlue;"><b>VASCO: Volume and Surface Co-Decomposition for Hybrid Manufacturing</b>  
-      <span style="color: rgba(0,0,0,1)">[<a href="https://fanchao98.github.io/VASCO%20page/vasco.html">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-      </div>
-
-	  	<A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-	        <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>,
-		Haochen Li,
-		<A href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</A>,
-		Jikai Liu,
-		<A href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</A>,
-		<A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu*</A>  <br>
-	 </span>
-	    ACM Transactions on Graphics (TOG) <br>
-		(ACM SIGGRAPH Asia 2023, Journal track)
-  <br>
-  </span></div>
-  </td>
-
-	
-
-	
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="As-Continuous-as-Possible Extrusion-Based Fabrication of Surface Models" src="images/acap.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-    <div style="color:SlateBlue;"><b>As-continuous-as-possible Extrusion-based Fabrication of Surface Models</b>  
-      <span style="color: rgba(0,0,0,1)">[<a href="https://fanchao98.github.io/ACAP%20page/acap.html">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-      </div>
-
-	  	<A href="https://fanchao98.github.io/">Fanchao Zhong</A>,
-	  Yonglai Xu,
-		  <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>,
-		  <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu*</A>  <br>
-		  
-		  	   ACM Transactions on Graphics (TOG)<br>
-	   Present on ACM SIGGRAPH 2023
-	 </span>
-
-  <br>
-  </span></div>
-  </td>
-
-
-
-
-
- <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2022</span>
-</div></td>
-          </tr>
-	
-	
-
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Co-Optimization of Design and Fabrication Plans for Carpentry" src="images/icee.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"> <span class="auto-style8">
-
-    <div style="color:SlateBlue;"><b>Co-Optimization of Design and Fabrication Plans for Carpentry </b>  
-      <span style="color: rgba(0,0,0,1)"> [<a href="CODFC/index.html">Project page</a>][<a href="https://arxiv.org/abs/2107.12265">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);">
-    </div>
-
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-		 <A href="https://mwillsey.com/">Max Willsey</A>,
-		 <A href="https://amy.zhucchini.ca/">Amy Zhu</A>,
-		 <A href="https://homes.cs.washington.edu/~cnandi/">Chandrakana Nandi</A>,
-		 <A href="https://ztatlock.net/">Zachary Tatlock</A>,
-		 <A href="https://people.csail.mit.edu/jsolomon/">Justin Solomon</A>,
-		 <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A>
-		 <br>
-	      ACM Transactions on Graphics (TOG)<br>
-		   Present on ACM SIGGRAPH 2022
-		    </span>
-  </div>
-  </td>
-  
-
-	 <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Computational Design of Knit Templates" src="images/knitting.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    <div style="color:SlateBlue;"><b>Computational Design of Knit Templates </b><br> 
-      <span style="color: rgba(0,0,0,1)">[<a href="https://dl.acm.org/doi/10.1145/3488006">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="https://dl.acm.org/doi/10.1145/3488006">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-      </div>
-		 <A href="https://homes.cs.washington.edu/~benjones//">Ben Jones</A>,
-		 Yuxuan Mei,
-	   	 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-		 <A href="https://make4all.org/portfolio/taylor-gotfrid/">Taylor Gotfrid</A>,
-		 <A href="https://make4all.org/portfolio/jennifer-mankoff/">Jennifer Mankoff</A>,
-		 <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A>
-	  </span><br>
-	  ACM Transactions on Graphics (TOG)<br> 
-	  Present on ACM SIGGRAPH 2022
-   </span></div>
-  </td>
-  
-  
-   <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2021</span>
-</div></td>
-          </tr>
-	
-	
-	
-
-<tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="A Roadmap Towards Parallel Printing for Desktop 3D Printers" src="images/sff.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    <div style="color:SlateBlue;"><b>A Roadmap Towards Parallel Printing for Desktop 3D Printers</b>  
-      <span style="color: rgba(0,0,0,1)">[<a href="paper/sff.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	<span style="color: rgba(0,0,0,1)">[<a href="paper/sff-slides.pdf">Slides</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	<span style="color: rgba(0,0,0,1)">[<a href="https://www.youtube.com/watch?v=RghmCu6399U&amp;ab_channel=ChandrakanaNandi">Talk</a>]</span></span><span style="color: rgb(204, 51, 204);">
-      </div>
-	  	  Molly Carton,
-	  <A href="https://homes.cs.washington.edu/~cnandi/">Chandrakana Nandi</A>,
-	  Adam Anderson,
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-	  Eva Darulova,
-	   <A href="https://homes.cs.washington.edu/~djg/">Dan Grossman</A>,
-	   <A href="https://jeffreyianlipton.com/">Jeffrey I. Lipton</A>,
-		 <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A>,
-	  	 <A href="https://ztatlock.net/">Zachary Tatlock</A>
-		 <br>
-	   </span>
-	   <A href="https://www.sffsymposium.org/">SFF Symp 2021</A>
-  <br>
-	 	  
-  </span>
-
-	</div>
-  </td>
-	
-	
-
-
-
-    <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Robotic Jigsaw: A Non-Holonomic Cutting Robot and Path Planning Algorithm" src="images/jigsaw.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;">
-    <span class="auto-style8">
-
-      <div style="color:SlateBlue;"><b>Robotic Jigsaw: A Non-Holonomic Cutting Robot and Path Planning Algorithm</b></div>
-
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-		 <A href="https://www.linkedin.com/in/yashtalwekar">Yash Talwekar</A>,
-		 Wenqing Lan,
-		 Chetan Sharma,
-		 <A href="https://www.csail.mit.edu/person/daniela-rus">Daniela Rus</A>,
-		 <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A>,
-		 <A href="https://jeffreyianlipton.com/">Jeffrey I. Lipton</A>
-	   
-    </span><br>
-	 IEEE IROS 2021
-  <br>
-
-  </span></div>
-  </td>
-  
-  
-  
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Fabrication-Aware Reverse Engineering for Carpentry" src="images/reverse.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-    <div style="color:SlateBlue;"><b> Fabrication-Aware Reverse Engineering for Carpentry </b> <br> 
-      <span style="color: rgba(0,0,0,1)">[<a href="https://grail.cs.washington.edu/projects/farec/">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="https://grail.cs.washington.edu/projects/farec/">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
+      </article>
+      <article class="publication-item" data-categories="georecon" data-priority="1">
+        <a class="publication-image" href="https://www.sciencedirect.com/science/article/pii/S0263823126007767?dgcid=coauthor" aria-label="Enhanced Energy Absorption in Re-Entrant Honeycombs via Elliptical Double-Arrow Hybrid Design">
+          <img src="images/tws2026.png" alt="Enhanced Energy Absorption in Re-Entrant Honeycombs via Elliptical Double-Arrow Hybrid Design" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://www.sciencedirect.com/science/article/pii/S0263823126007767?dgcid=coauthor">Enhanced Energy Absorption in Re-Entrant Honeycombs via Elliptical Double-Arrow Hybrid Design</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://www.sciencedirect.com/science/article/pii/S0263823126007767?dgcid=coauthor">Paper</a>
+          </div>
+          <p class="publication-summary">Introduces an elliptical double-arrow hybrid re-entrant honeycomb to improve structural energy absorption.</p>
+          <p class="publication-authors">Wenpeng Xu, Dongxia Wang, Jinglong Zhang, Jiahe Hu, <a href="https://haoxu99.github.io/">Hao Xu</a>, Liuchao Jin, Haitao Ye, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Wei-Hsin Liao</p>
+          <p class="publication-venue"><em>Thin-Walled Structures</em>, 2026</p>
         </div>
-
-
-		 <A href="https://james.noeckel.com/">James Noeckel</A>,
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-		 <A href="https://homes.cs.washington.edu/~curless/">Brian Curless</A>,
-		 <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A>
-	   </span><br>
-	  Computer Graphics Forum (SGP 2021)
-  </span></div>
-  </td>
-  
-  
-  
-  
-    <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Shell Thickening for Extrusion-Based Ceramics Printing" src="images/thicken.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    <div style="color:SlateBlue;"><b>Shell Thickening for Extrusion-Based Ceramics Printing </b>  
-      <span style="color: rgba(0,0,0,1)">[<a href="https://www.sciencedirect.com/science/article/pii/S009784932100073X">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="https://www.sciencedirect.com/science/article/pii/S009784932100073X">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-       </div>
-		 Yu Xing,
-		 Yu Zhou,
-		 <A href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</A>,
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-		 Wenqiang Liu,
-		 Jingbo Jiang,
-		 <A href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</A>
-	    </span><br>
-	  Computers &amp; Graphics (CAD &amp; Graphics 2021)
-  </span></div>
-  </td>
-  
-
-  
-   <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2020</span>
-</div></td>
-          </tr>
- 
-
-
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="VDAC: Volume Decompose-and-Carve for Subtractive Manufacturing" src="images/VDAC.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    <div style="color:SlateBlue;"><b>VDAC: Volume Decompose-and-Carve for Subtractive Manufacturing </b>
-      <span style="color: rgba(0,0,0,1)">[<a href="https://sites.google.com/site/alimahdaviamiri/projects/vdac?authuser=0">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="https://sites.google.com/site/alimahdaviamiri/projects/vdac?authuser=0">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-     </div>
-
-		 <A href="https://sites.google.com/site/alimahdaviamiri/">Ali Mahdavi-Amiri</A>,
-		 <A href="https://fenggenyu.github.io/">Fenggen Yu</A>,
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao*</b></A>,
-		  <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A>,
-		   <A href="http://www.cs.sfu.ca/~haoz/">Hao Zhang</A>
-	    </span><br>
-	   ACM Transactions on Graphics (TOG) <br>
-	   (ACM SIGGRAPH Asia 2020)
-   </span></div>
-  </td>
-  
-  
-   
-   <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2019</span>
-</div></td>
-          </tr> 
-  
-  
-  <!--Carpentry Compiler-->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Carpentry Compiler" src="images/carpentry.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-    <div style="color:SlateBlue;"><b>Carpentry Compiler </b>
-      <span style="color: rgba(0,0,0,1)">[<a href="https://grail.cs.washington.edu/projects/carpentrycompiler/">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="https://grail.cs.washington.edu/projects/carpentrycompiler/">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
+      </article>
+      <article class="publication-item" data-categories="learning georecon" data-priority="1">
+        <a class="publication-image" href="https://www.sciencedirect.com/science/article/abs/pii/S095219762600031X" aria-label="Rich and Cross-Fused Feature Embedding for Few-Shot Point Cloud Semantic Segmentation">
+          <img src="images/rich.png" alt="Rich and Cross-Fused Feature Embedding for Few-Shot Point Cloud Semantic Segmentation" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://www.sciencedirect.com/science/article/abs/pii/S095219762600031X">Rich and Cross-Fused Feature Embedding for Few-Shot Point Cloud Semantic Segmentation</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://www.sciencedirect.com/science/article/abs/pii/S095219762600031X">Project</a>
+          </div>
+          <p class="publication-summary">Combines rich local features and cross-scale fusion for few-shot semantic segmentation of point clouds.</p>
+          <p class="publication-authors">Yuyun Wei, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Jia Cui, <a href="https://scholar.google.com/citations?user=A_K6bhAAAAAJ&amp;hl=en">Meng Qi</a></p>
+          <p class="publication-venue"><em>Engineering Applications of Artificial Intelligence</em>, 2026</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="learning spatplan cnc hybridfab dataset decom" data-priority="2">
+        <a class="publication-image" href="paper/2026-Neural%20Field-Guided%20Sequence%20Planning%20for%20ASHM.pdf" aria-label="Neural Field-Based Sequence Planning for Additive-Subtractive Hybrid Manufacturing">
+          <img src="images/shudanpaper.png" alt="Neural Field-Based Sequence Planning for Additive-Subtractive Hybrid Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="paper/2026-Neural%20Field-Guided%20Sequence%20Planning%20for%20ASHM.pdf">Neural Field-Based Sequence Planning for Additive-Subtractive Hybrid Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="paper/2026-Neural%20Field-Guided%20Sequence%20Planning%20for%20ASHM.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Uses neural fields to represent geometry and plan additive-subtractive manufacturing sequences.</p>
+          <p class="publication-authors">Shudan Guo, <a href="https://fanchao98.github.io/">Fanchao Zhong</a>, Liyuan Wang, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue">Eurographics Symposium on Geometry Processing (SGP) 2026 · Poster Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="learning georecon" data-priority="2">
+        <a class="publication-image" href="https://pku-vcl-geometry.github.io/Orbit2Ground/" aria-label="From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images">
+          <img src="images/2026-orbit.png" alt="From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://pku-vcl-geometry.github.io/Orbit2Ground/">From Orbit to Ground: Generative City Photogrammetry from Extreme Off-Nadir Satellite Images</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://pku-vcl-geometry.github.io/Orbit2Ground/">Project</a>
+          </div>
+          <p class="publication-summary">Generates city-scale photogrammetric reconstructions from extreme off-nadir satellite imagery.</p>
+          <p class="publication-authors"><a href="https://maxmilite.github.io/">Fei Yu</a>, <a href="https://scholar.google.com/citations?user=XchgHFoAAAAJ">Yu Liu</a>, <a href="https://scholar.google.com/citations?user=2A1sp-wAAAAJ">Luyang Tang</a>, <a href="https://scholar.google.com/citations?user=bqsITKQAAAAJ">Mingchao Sun</a>, <a href="https://github.com/boolwater">Zengye Ge</a>, <a href="https://scholar.google.com/citations?user=YMRzlkMAAAAJ">Rui Bu</a>, Yuchao Jin, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://ai4scientificimaging.org/">He Sun</a>, <a href="https://yangyan.li/">Yangyan Li</a>, <a href="https://scholar.google.com/citations?user=JGi4S0EAAAAJ">Mu Xu</a>, <a href="https://wenzhengchen.github.io/">Wenzheng Chen</a>, <a href="http://baoquanchen.info/">Baoquan Chen</a></p>
+          <p class="publication-venue">CVPR 2026 · Findings</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="learning georecon art" data-priority="2">
+        <a class="publication-image" href="https://maxmilite.github.io/rec-from-ultrafast-blur/" aria-label="Recovering 3D Shapes from Ultra-Fast Motion-Blurred Images">
+          <img src="images/blur1.png" alt="Recovering 3D Shapes from Ultra-Fast Motion-Blurred Images" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://maxmilite.github.io/rec-from-ultrafast-blur/">Recovering 3D Shapes from Ultra-Fast Motion-Blurred Images</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://maxmilite.github.io/rec-from-ultrafast-blur/">Project</a>
+            <a href="https://maxmilite.github.io/rec-from-ultrafast-blur/static/paper.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Recovers 3D geometry from images degraded by ultra-fast motion blur.</p>
+          <p class="publication-authors"><a href="https://maxmilite.github.io/">Fei Yu</a>, Shudan Guo, <a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</a>, <a href="https://wangningbei.github.io/">Beibei Wang</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a>, <a href="https://wenzhengchen.github.io/">Wenzheng Chen</a></p>
+          <p class="publication-venue">3DV 2026</p>
+        </div>
+      </article>
     </div>
-
-		 <A href="https://chenming-wu.github.io/">Chenming Wu</A>,
-		 <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-		 <A href="https://homes.cs.washington.edu/~cnandi/">Chandrakana Nandi</A>,
-		 <A href="https://jeffreyianlipton.com/">Jeffrey I. Lipton</A>,
-		 <A href="https://homes.cs.washington.edu/~ztatlock/">Zachary Tatlock</A>,
-		  <A href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</A><br>   
-	 </span>
-   ACM Transactions on Graphics (TOG) <br>
-   (ACM SIGGRAPH Asia 2019)
-   </span></div>
-  </td>
-
-	
-	<!--Strong 3D Printing by TPMS Injection -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Strong 3D Printing by TPMS Injection" src="images/injection.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-
-    <div style="color:SlateBlue;"><b>Strong 3D Printing by TPMS Injection</b>
-      <span style="color: rgba(0,0,0,1)">[<a href="https://ieeexplore.ieee.org/document/8703138">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="paper/injection.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-   </div>
-
-		Xin Yan,
-		Cong Rao,
-		<A href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</A>,
-	   <A href="http://www.cs.bgu.ac.il/~asharf/">Andrei Sharf</A>,			   
-       <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-	   <A href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</A>
-	   </span><br>
-     <a href="https://ieeexplore.ieee.org/document/8703138">IEEE Transactions on Visualization and Computer Graphics (TVCG) 2019</a>
-  <br>
-  </span></div>
-  </td>
-  
-  
-
-  
-  
-  
-
-     <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2018</span>
-</div></td>
-          </tr> 
-  
-  
-  
-      <!--PhD Thesis -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Geometric Research and Application on Additive and Subtractive Manufacturing" src="images/sdu.png" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;">
-
- <div style="color:SlateBlue;"><b>Geometric Research and Application on Additive and Subtractive manufacturing </b>
-  <span style="color: rgba(0,0,0,1)">[<a href="paper/Thesis.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-     </div>
-
-  <span class="auto-style8">
-	   CCF Outstanding Doctoral Dissertation Award 2019 
- </span><br>
- PhD Thesis (in Chinese), 2018, Shandong University
-      </span>  
-     </div>
-  </td>
-
-  <!--DSCarver: Decompose-and-Spiral-Carve for Subtractive Manufacturing -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="DSCarver: Decompose-and-Spiral-Carve for Subtractive Manufacturing" src="images/rep_image.png" height="124" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-  
-    <div style="color:SlateBlue;"><b>DSCarver: Decompose-and-Spiral-Carve for Subtractive Manufacturing</b>
-      <span style="color: rgba(0,0,0,1)">[<a href="DSCarver/index.html">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="paper/cnc.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-  </div>
-
-       <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-       <A href="http://www.cs.sfu.ca/~haoz/">Hao Zhang</A>,
-        <A href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</A>,
-        Yuanmin Deng,
-	   <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-        <A href="http://i.cs.hku.hk/~wenping/">Wenping Wang</A>,
-	   <A href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</A>,
-	   <A href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</A>
-	  </span><br>
-    ACM Transactions on Graphics (<a href="https://s2018.siggraph.org/">ACM SIGGRAPH 2018</a>)
-  </div>
-  </td>
-  
-  
-     <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2016</span>
-</div></td>
-          </tr> 
-  
-  <!--Connected Fermat Spirals for Layered Fabrication -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-  <img alt="Connected Fermat Spirals for Layered Fabrication" src="images/spiral.jpg" height="124" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-  
-    <div style="color:SlateBlue;"><b>Connected Fermat Spirals for Layered Fabrication</b><br>
-      <span style="color: rgba(0,0,0,1)">[<a href="CFS/index.html">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-	  <span style="color: rgba(0,0,0,1)">[<a href="paper/fermat_spirals.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
-  </div>
-
-       <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-	   Fanglin Gu,
-	   <A href="http://ttic.uchicago.edu/~huangqx/">Qixing Huang</A>,   
-	    J. A. Garcia Galicia,
-	   <A href="http://www-bcf.usc.edu/~yongchen/">Yong Chen</A>,  
-	   <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-	   <A href="http://hpcg.purdue.edu/bbenes/index.htm">Bedrich Benes</A>,
-	   <A href="http://www.cs.sfu.ca/~haoz/">Hao Zhang</A>,
-	   <A href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</A>,
-	   <A href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</A>
-	    </span><br>
-      ACM Transactions on Graphics (<a href="http://s2016.siggraph.org/">ACM SIGGRAPH 2016</a>)
-   </span></div>
-  </td>
-  
-  <!--Printed Perforated Lampshades for Continuous Projective Images -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-<img alt="Printed Perforated Lampshades for Continuous Projective Images" src="images/lamp.jpg" height="124" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    
-    <div style="color:SlateBlue;"><b>Printed Perforated Lampshades for Continuous Projective Images</b>
-      <span style="color: rgba(0,0,0,1)">[<a href="Lampshades/index.html">Project page</a>]</span></span><span style="color: rgb(204, 51, 204);">
-    <span style="color: rgba(0,0,0,1)">[<a href="paper/3dLamp_TOG_Final.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
+  </section>
+  <section class="publication-year" id="year-2025" data-year="2025" aria-labelledby="year-2025-heading">
+    <h2 id="year-2025-heading">2025</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="spatplan printing cnc hybridfab decom" data-priority="0">
+        <a class="publication-image" href="https://fanchao98.github.io/Refab%20page/refab.html" aria-label="Waste-to-Value: Reutilized Material Maximization for Additive and Subtractive Hybrid Remanufacturing">
+          <img src="images/refab.jpg" alt="Waste-to-Value: Reutilized Material Maximization for Additive and Subtractive Hybrid Remanufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://fanchao98.github.io/Refab%20page/refab.html">Waste-to-Value: Reutilized Material Maximization for Additive and Subtractive Hybrid Remanufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://fanchao98.github.io/Refab%20page/refab.html">Project</a>
+          </div>
+          <p class="publication-summary">Plans additive-subtractive remanufacturing while maximizing the reuse of existing material.</p>
+          <p class="publication-authors"><a href="https://fanchao98.github.io/">Fanchao Zhong</a>, <a href="https://zmzhang0.github.io/">Zhenmin Zhang</a>, Liyuan Wang, <a href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</a>, Jikai Liu, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · ACM SIGGRAPH Asia 2025, Journal Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="geoprocess spatplan cnc analysis voronoi pack" data-priority="0">
+        <a class="publication-image" href="https://zmzhang0.github.io/projects/Chapper/index.html" aria-label="Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing">
+          <img src="images/chapper.jpg" alt="Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://zmzhang0.github.io/projects/Chapper/index.html">Chapper: Carvable Hull-and-Pack for Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://zmzhang0.github.io/projects/Chapper/index.html">Project</a>
+          </div>
+          <p class="publication-summary">Jointly decomposes and packs shapes into carvable hulls for efficient subtractive manufacturing.</p>
+          <p class="publication-authors"><a href="https://zmzhang0.github.io/">Zhenmin Zhang</a>, Shuai Feng, <a href="https://haoxu99.github.io/">Hao Xu</a>, Lujiaoyang Fu, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a>, <a href="https://jianweiguo.net/">Jianwei Guo</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · ACM SIGGRAPH Asia 2025, Journal Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="learning geoprocess cnc analysis dataset" data-priority="0">
+        <a class="publication-image" href="https://fanchao98.github.io/DeepMill/deepmill.html" aria-label="DeepMill: Neural Accessibility Learning for Subtractive Manufacturing">
+          <img src="images/deepmill.png" alt="DeepMill: Neural Accessibility Learning for Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://fanchao98.github.io/DeepMill/deepmill.html">DeepMill: Neural Accessibility Learning for Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://fanchao98.github.io/DeepMill/deepmill.html">Project</a>
+          </div>
+          <p class="publication-summary">Learns tool accessibility to efficiently analyze manufacturability for subtractive processes.</p>
+          <p class="publication-authors"><a href="https://fanchao98.github.io/">Fanchao Zhong</a>, Yang Wang, <a href="https://wang-ps.github.io/">Peng-Shuai Wang</a>, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue">ACM SIGGRAPH 2025 · Conference Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="learning geogen printing dataset" data-priority="0">
+        <a class="publication-image" href="https://github.com/TimHsue/MIND" aria-label="MIND: Microstructure INverse Design with Generative Hybrid Neural Representation">
+          <img src="images/MIND2.jpg" alt="MIND: Microstructure INverse Design with Generative Hybrid Neural Representation" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://github.com/TimHsue/MIND">MIND: Microstructure INverse Design with Generative Hybrid Neural Representation</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://github.com/TimHsue/MIND">Project</a>
+          </div>
+          <p class="publication-summary">Uses a generative hybrid neural representation for performance-driven inverse design of microstructures.</p>
+          <p class="publication-authors"><a href="https://timhsue.github.io/">Tianyang Xue</a>, Longdu Liu, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu*</a>, <a href="https://www.pmh47.net/">Paul Henderson</a>, <a href="https://tangpengbin.github.io/">Pengbin Tang</a>, Haochen Li, Jikai Liu, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://penghao94.github.io/">Hao Peng</a>, <a href="https://berndbickel.com/about-me">Bernd Bickel</a></p>
+          <p class="publication-venue">ACM SIGGRAPH 2025 · Conference Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="spatplan cnc hybridfab dataset" data-priority="2">
+        <a class="publication-image" href="https://www.jcad.cn/article/doi/10.3724/SP.J.1089.2025-00211" aria-label="DHMP: A Large 3D Model Dataset for Hybrid Manufacturing Process Planning">
+          <img src="images/DHMP.png" alt="DHMP: A Large 3D Model Dataset for Hybrid Manufacturing Process Planning" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://www.jcad.cn/article/doi/10.3724/SP.J.1089.2025-00211">DHMP: A Large 3D Model Dataset for Hybrid Manufacturing Process Planning</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://www.jcad.cn/article/doi/10.3724/SP.J.1089.2025-00211">Project</a>
+          </div>
+          <p class="publication-summary">Provides a large 3D model dataset for learning and evaluating hybrid manufacturing process plans.</p>
+          <p class="publication-authors">Liyuan Wang, <a href="https://fanchao98.github.io/">Fanchao Zhong</a>, <a href="https://manyili12345.github.io/">Manyi Li</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue"><em>Journal of Computer-Aided Design &amp; Computer Graphics</em>, 2025 · In Chinese</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="spatplan cnc analysis pack" data-priority="2">
+        <a class="publication-image" href="https://www.sciencedirect.com/science/article/pii/S1524070325000293" aria-label="Carvable Packing of Revolved 3D Objects for Subtractive Manufacturing">
+          <img src="images/pack2d.png" alt="Carvable Packing of Revolved 3D Objects for Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://www.sciencedirect.com/science/article/pii/S1524070325000293">Carvable Packing of Revolved 3D Objects for Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://www.sciencedirect.com/science/article/pii/S1524070325000293">Project</a>
+          </div>
+          <p class="publication-summary">Packs revolved objects while accounting for the geometric constraints of subtractive manufacturing.</p>
+          <p class="publication-authors">Chengdong Wei, Shuai Feng, <a href="https://haoxu99.github.io/">Hao Xu</a>, Qidong Zhang, Songyang Zhang, Zongzhen Li, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue"><em>Graphical Models</em>, 2025 · <a href="https://www.sciencedirect.com/special-issue/311602/geometric-modeling-for-multi-axis-additive-and-subtractive-manufacturing">Special Issue: Add-and-Sub Manufacturing</a></p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="spatplan cnc decom" data-priority="2">
+        <a class="publication-image" href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5325965" aria-label="Carving Shapes with Ruled Surfaces for Rough Machining">
+          <img src="images/2025-Carving.png" alt="Carving Shapes with Ruled Surfaces for Rough Machining" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5325965">Carving Shapes with Ruled Surfaces for Rough Machining</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=5325965">Project</a>
+          </div>
+          <p class="publication-summary">Plans ruled-surface carving operations for efficient rough machining of complex shapes.</p>
+          <p class="publication-authors">Zheng Zhang, Yifei Li, Kang Wu, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Xu Liu, Xiang Wang, <a href="http://staff.ustc.edu.cn/~lgliu/">Ligang Liu</a>, <a href="http://staff.ustc.edu.cn/~fuxm/">Xiao-Ming Fu</a></p>
+          <p class="publication-venue"><em>Computers &amp; Graphics</em>, 2025</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="hybridfab wire art" data-priority="2">
+        <a class="publication-image" href="https://link.springer.com/chapter/10.1007/978-981-95-7195-6_5" aria-label="WireSculptor: Interactive Guided Bending Workflow for Novice-Friendly Wire Sculpture Fabrication">
+          <img src="images/wiresculptor.png" alt="WireSculptor: Interactive Guided Bending Workflow for Novice-Friendly Wire Sculpture Fabrication" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://link.springer.com/chapter/10.1007/978-981-95-7195-6_5">WireSculptor: Interactive Guided Bending Workflow for Novice-Friendly Wire Sculpture Fabrication</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://link.springer.com/chapter/10.1007/978-981-95-7195-6_5">Project</a>
+            <a href="paper/WireSculptor_ICXR2025.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Provides an interactive guided workflow that helps novices fabricate wire sculptures by bending.</p>
+          <p class="publication-authors">Runze Xue, <a href="https://maxmilite.github.io/">Fei Yu</a>, Baohang Zhou, Jialu Wang, <a href="https://cvfzhong.github.io/">Fan Zhong</a>, <a href="https://qiongzn.github.io/">Qiong Zeng</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a></p>
+          <p class="publication-venue">ICXR 2025</p>
+        </div>
+      </article>
     </div>
-
-	   <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-	   <A href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</A>,  
-	   Yuan Wei,
-	   <A href="http://www.cs.huji.ac.il/~danix/">Dani Lischinski</A>,
-	   <A href="http://www.cs.bgu.ac.il/~asharf/">Andrei Sharf</A>,
-	   <A href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</A>,
-	   <A href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</A><br>
-	   </span>
-     ACM Transactions on Graphics <br>
-     Present on <a href="http://s2016.siggraph.org/">ACM SIGGRAPH 2016</a>
-     </span></div>
-  </td>
-  
-  
-  
-     <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2015</span>
-</div></td>
-          </tr> 
-  
-   <!--Variational Circular Treemaps for Hierarchical Data -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-    </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
-<img alt="Variational Circular Treemaps for Hierarchical Data" src="images/circle.jpg" height="124" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    
-    <div style="color:SlateBlue;"><b>Variational Circular Treemaps for Hierarchical Data</b>
-      <span style="color: rgba(0,0,0,1)">[<a href="paper/create_pdf.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
+  </section>
+  <section class="publication-year" id="year-2024" data-year="2024" aria-labelledby="year-2024-heading">
+    <h2 id="year-2024-heading">2024</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="hybridfab wire art" data-priority="0">
+        <a class="publication-image" href="TuneIt/index.html" aria-label="Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing">
+          <img src="images/Tuneit.png" alt="Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="TuneIt/index.html">Tune-It: Optimizing Wire Reconfiguration for Sculpture Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="TuneIt/index.html">Project</a>
+          </div>
+          <p class="publication-summary">Optimizes wire reconfiguration sequences for efficient sculpture manufacturing.</p>
+          <p class="publication-authors"><a href="https://qibingwu.github.io/">Qibing Wu</a>, Zhihao Zhang, <a href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</a>, <a href="https://fanchao98.github.io/">Fanchao Zhong</a>, Yueze Zhu, Xurong Lu, Runze Xue, Rui Li, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue">ACM SIGGRAPH Asia 2024 · Conference Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="pathplan" data-priority="1">
+        <a class="publication-image" href="FourAxis/index.html" aria-label="Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing">
+          <img src="images/FourAxis.png" alt="Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="FourAxis/index.html">Continuous Toolpath Optimization for Simultaneous Four-Axis Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="FourAxis/index.html">Project</a>
+          </div>
+          <p class="publication-summary">Optimizes continuous toolpaths for efficient and high-quality simultaneous four-axis machining.</p>
+          <p class="publication-authors"><a href="https://zmzhang0.github.io/">Zhenmin Zhang</a>, Zihan Shi, <a href="https://fanchao98.github.io/">Fanchao Zhong</a>, Kun Zhang, Wenjing Zhang, Jianwei Guo, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a></p>
+          <p class="publication-venue"><em>Computer Graphics Forum</em>, 2024</p>
+        </div>
+      </article>
     </div>
-
-	   <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-	   <A href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</A>,
-	   Zhitao Bo
-	   </span> <br>
-      <a href="http://www.jos.org.cn/ch/reader/view_abstract.aspx?file_no=4952&amp;flag=1">Journal of Software</a> (<a href="http://www.cad.zju.edu.cn/home/pvis2015/">PacificVis 2015</a>) (in Chinese)
-  
-  
-   </span></div>
-  </td>
-  
-
-   <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2014</span>
-</div></td>
-          </tr>   
- 
-  <!--Build-to-Last: Strength to Weight 3D Printed Objects -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-   </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
- <img alt="Build-to-Last: Strength to Weight 3D Printed Objects" src="images/kitten.jpg" height="124" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    
-    <div style="color:SlateBlue;"><b>Build-to-Last: Strength to Weight 3D Printed Objects</b><br>
-      <span style="color: rgba(0,0,0,1)">[<a href="BuildtoLast/index.html">Project Page</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
+  </section>
+  <section class="publication-year" id="year-2023" data-year="2023" aria-labelledby="year-2023-heading">
+    <h2 id="year-2023-heading">2023</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="spatplan printing cnc hybridfab analysis decom" data-priority="0">
+        <a class="publication-image" href="https://fanchao98.github.io/VASCO%20page/vasco.html" aria-label="VASCO: Volume and Surface Co-Decomposition for Hybrid Manufacturing">
+          <img src="images/vasco.png" alt="VASCO: Volume and Surface Co-Decomposition for Hybrid Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://fanchao98.github.io/VASCO%20page/vasco.html">VASCO: Volume and Surface Co-Decomposition for Hybrid Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://fanchao98.github.io/VASCO%20page/vasco.html">Project</a>
+          </div>
+          <p class="publication-summary">Co-decomposes volume and surface to plan additive-subtractive hybrid manufacturing.</p>
+          <p class="publication-authors"><a href="https://fanchao98.github.io/">Fanchao Zhong</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a>, Haochen Li, <a href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</a>, Jikai Liu, <a href="https://cfcs.pku.edu.cn/baoquan/">Baoquan Chen</a>, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu*</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · ACM SIGGRAPH Asia 2023, Journal Track</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="spatplan pathplan printing analysis decom" data-priority="0">
+        <a class="publication-image" href="https://fanchao98.github.io/ACAP%20page/acap.html" aria-label="As-Continuous-as-Possible Extrusion-Based Fabrication of Surface Models">
+          <img src="images/acap.png" alt="As-Continuous-as-Possible Extrusion-Based Fabrication of Surface Models" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://fanchao98.github.io/ACAP%20page/acap.html">As-Continuous-as-Possible Extrusion-Based Fabrication of Surface Models</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://fanchao98.github.io/ACAP%20page/acap.html">Project</a>
+          </div>
+          <p class="publication-summary">Generates nearly continuous extrusion paths for fabricating surface models.</p>
+          <p class="publication-authors"><a href="https://fanchao98.github.io/">Fanchao Zhong</a>, Yonglai Xu, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a>, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu*</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · Presented at ACM SIGGRAPH 2023</p>
+        </div>
+      </article>
     </div>
-
-	   <A href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</A>,
-       <A href="http://www.cs.bgu.ac.il/~asharf/">Andrei Sharf</A>,   
-       <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-       Yuan Wei,
-       Qingnan Fan,
-       Xuelin Chen,
-       <A href="http://www.animlife.com/">Yann Savoye</A>,
-       <A href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</A>,
-       <A href="http://www.cs.tau.ac.il/~dcor//">Daniel Cohen-Or</A>,
-       <A href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</A><br>
-	     </span>ACM Transactions on Graphics (<a href="http://s2014.siggraph.org/">ACM SIGGRAPH 2014</a>)
-   </span>
-  </div>
-  </td>
- </tr>
- 
- 
-    <tr>
- 
-  <td colspan="2" style="text-align: center; vertical-align: middle;">
-  
-      <div style="display: flex;align-items: flex-end;margin: 10px 0 10px;">
-  <hr style="flex:1;border:none;border-bottom:1px solid #d0d0d0;margin:0;">
-  <span style="font-size:32px;color:#bbbbbb;margin-left:10px;line-height:0.8;">2012</span>
-</div></td>
-          </tr> 
- 
-   <!--An algorithm for visibility computation of points based on Voronoi diagrams -->
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
-   </tr>
-  <tr>
-  <td style="text-align: center; vertical-align: middle;">
- <img alt="An Algorithm for Visibility Computation of Points Based on Voronoi Diagrams" src="images/visibility.jpg" height="124" width="380" loading="lazy" decoding="async"><br></td>
-  <td style="text-align: justify; vertical-align: middle;" class="auto-style6">
-  <div class="auto-style6" style="text-align: justify;"><span class="auto-style8">
-    
-    <div style="color:SlateBlue;"><b>An algorithm for visibility computation of points based on Voronoi diagrams</b>
-      <span style="color: rgba(0,0,0,1)">[<a href="paper/An Algorithm for Visibility Computation of Points in Polygon.pdf">Paper</a>]</span></span><span style="color: rgb(204, 51, 204);"><br>
+  </section>
+  <section class="publication-year" id="year-2022" data-year="2022" aria-labelledby="year-2022-heading">
+    <h2 id="year-2022-heading">2022</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="codesignfab carpentry pack" data-priority="0">
+        <a class="publication-image" href="CODFC/index.html" aria-label="Co-Optimization of Design and Fabrication Plans for Carpentry">
+          <img src="images/icee.png" alt="Co-Optimization of Design and Fabrication Plans for Carpentry" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="CODFC/index.html">Co-Optimization of Design and Fabrication Plans for Carpentry</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="CODFC/index.html">Project</a>
+            <a href="https://arxiv.org/abs/2107.12265">Paper</a>
+          </div>
+          <p class="publication-summary">Couples structural design, assembly layout, and fabrication planning for carpentry-aware construction.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://mwillsey.com/">Max Willsey</a>, <a href="https://amy.zhucchini.ca/">Amy Zhu</a>, <a href="https://homes.cs.washington.edu/~cnandi/">Chandrakana Nandi</a>, <a href="https://ztatlock.net/">Zachary Tatlock</a>, <a href="https://people.csail.mit.edu/jsolomon/">Justin Solomon</a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · Presented at ACM SIGGRAPH 2022</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="geogen codesignfab" data-priority="0">
+        <a class="publication-image" href="https://dl.acm.org/doi/10.1145/3488006" aria-label="Computational Design of Knit Templates">
+          <img src="images/knitting.png" alt="Computational Design of Knit Templates" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://dl.acm.org/doi/10.1145/3488006">Computational Design of Knit Templates</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://dl.acm.org/doi/10.1145/3488006">Project</a>
+            <a href="https://dl.acm.org/doi/10.1145/3488006">Paper</a>
+          </div>
+          <p class="publication-summary">Computes fabrication-ready knit templates for producing target shapes.</p>
+          <p class="publication-authors"><a href="https://homes.cs.washington.edu/~benjones//">Ben Jones</a>, Yuxuan Mei, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://make4all.org/portfolio/taylor-gotfrid/">Taylor Gotfrid</a>, <a href="https://make4all.org/portfolio/jennifer-mankoff/">Jennifer Mankoff</a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · Presented at ACM SIGGRAPH 2022</p>
+        </div>
+      </article>
     </div>
-
-
-     <A href="https://haisenzhao.github.io/"><b>Haisen Zhao</b></A>,
-	 Chenglei Yang,
-	 <A href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</A>,
-	 Xiaoting Wang,
-	  Yijun Yang,
-	  Xiangxu Meng
-	     </span><br>
-	   Computer-Aided Design &amp; Computer Graphics (CAD/CG 2012), Best Student Paper. (in Chinese)<br>
-  
-  </span>
-  </div>
-  </td>
- </tr>
- 
-  <tr>
-    <td colspan="2" style="text-align: center; vertical-align: middle;"></td>
- </tr>
-
-	</tbody>
-</table>
+  </section>
+  <section class="publication-year" id="year-2021" data-year="2021" aria-labelledby="year-2021-heading">
+    <h2 id="year-2021-heading">2021</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="georecon carpentry" data-priority="1">
+        <a class="publication-image" href="https://grail.cs.washington.edu/projects/farec/" aria-label="Fabrication-Aware Reverse Engineering for Carpentry">
+          <img src="images/reverse.png" alt="Fabrication-Aware Reverse Engineering for Carpentry" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://grail.cs.washington.edu/projects/farec/">Fabrication-Aware Reverse Engineering for Carpentry</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://grail.cs.washington.edu/projects/farec/">Project</a>
+            <a href="https://grail.cs.washington.edu/projects/farec/">Paper</a>
+          </div>
+          <p class="publication-summary">Reconstructs carpentry designs from geometry while respecting fabrication and assembly constraints.</p>
+          <p class="publication-authors"><a href="https://james.noeckel.com/">James Noeckel</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://homes.cs.washington.edu/~curless/">Brian Curless</a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a></p>
+          <p class="publication-venue"><em>Computer Graphics Forum</em> · SGP 2021</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="pathplan printing robot" data-priority="2">
+        <a class="publication-image" href="paper/sff.pdf" aria-label="A Roadmap Towards Parallel Printing for Desktop 3D Printers">
+          <img src="images/sff.png" alt="A Roadmap Towards Parallel Printing for Desktop 3D Printers" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="paper/sff.pdf">A Roadmap Towards Parallel Printing for Desktop 3D Printers</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="paper/sff.pdf">Paper</a>
+            <a href="paper/sff-slides.pdf">Slides</a>
+            <a href="https://www.youtube.com/watch?v=RghmCu6399U&amp;ab_channel=ChandrakanaNandi">Talk</a>
+          </div>
+          <p class="publication-summary">Explores coordinated parallel-printing strategies for multiple desktop 3D printers.</p>
+          <p class="publication-authors">Molly Carton, <a href="https://homes.cs.washington.edu/~cnandi/">Chandrakana Nandi</a>, Adam Anderson, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Eva Darulova, <a href="https://homes.cs.washington.edu/~djg/">Dan Grossman</a>, <a href="https://jeffreyianlipton.com/">Jeffrey I. Lipton</a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a>, <a href="https://ztatlock.net/">Zachary Tatlock</a></p>
+          <p class="publication-venue"><a href="https://www.sffsymposium.org/">SFF Symposium 2021</a></p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="pathplan robot" data-priority="2">
+        <a class="publication-image" href="https://ieeexplore.ieee.org/document/9636066" aria-label="Robotic Jigsaw: A Non-Holonomic Cutting Robot and Path Planning Algorithm">
+          <img src="images/jigsaw.png" alt="Robotic Jigsaw: A Non-Holonomic Cutting Robot and Path Planning Algorithm" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://ieeexplore.ieee.org/document/9636066">Robotic Jigsaw: A Non-Holonomic Cutting Robot and Path Planning Algorithm</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://ieeexplore.ieee.org/document/9636066">Project</a>
+          </div>
+          <p class="publication-summary">Combines a non-holonomic cutting robot with path planning for autonomous jigsaw fabrication.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://www.linkedin.com/in/yashtalwekar">Yash Talwekar</a>, Wenqing Lan, Chetan Sharma, <a href="https://www.csail.mit.edu/person/daniela-rus">Daniela Rus</a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a>, <a href="https://jeffreyianlipton.com/">Jeffrey I. Lipton</a></p>
+          <p class="publication-venue">IEEE IROS 2021</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="geogen printing" data-priority="2">
+        <a class="publication-image" href="https://www.sciencedirect.com/science/article/pii/S009784932100073X" aria-label="Shell Thickening for Extrusion-Based Ceramics Printing">
+          <img src="images/thicken.png" alt="Shell Thickening for Extrusion-Based Ceramics Printing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://www.sciencedirect.com/science/article/pii/S009784932100073X">Shell Thickening for Extrusion-Based Ceramics Printing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://www.sciencedirect.com/science/article/pii/S009784932100073X">Project</a>
+            <a href="https://www.sciencedirect.com/science/article/pii/S009784932100073X">Paper</a>
+          </div>
+          <p class="publication-summary">Computes printable shell thickening for extrusion-based ceramic fabrication.</p>
+          <p class="publication-authors">Yu Xing, Yu Zhou, <a href="https://ringednebulae.github.io/personal-webpage/">Xin Yan</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Wenqiang Liu, Jingbo Jiang, <a href="http://irc.cs.sdu.edu.cn/~lulin/index.html">Lin Lu</a></p>
+          <p class="publication-venue"><em>Computers &amp; Graphics</em> · CAD &amp; Graphics 2021</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2020" data-year="2020" aria-labelledby="year-2020-heading">
+    <h2 id="year-2020-heading">2020</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="spatplan pathplan cnc decom" data-priority="0">
+        <a class="publication-image" href="https://sites.google.com/site/alimahdaviamiri/projects/vdac?authuser=0" aria-label="VDAC: Volume Decompose-and-Carve for Subtractive Manufacturing">
+          <img src="images/VDAC.png" alt="VDAC: Volume Decompose-and-Carve for Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://sites.google.com/site/alimahdaviamiri/projects/vdac?authuser=0">VDAC: Volume Decompose-and-Carve for Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://sites.google.com/site/alimahdaviamiri/projects/vdac?authuser=0">Project</a>
+            <a href="https://sites.google.com/site/alimahdaviamiri/projects/vdac?authuser=0">Paper</a>
+          </div>
+          <p class="publication-summary">Decomposes volumes into carvable parts and plans their subtractive fabrication.</p>
+          <p class="publication-authors"><a href="https://sites.google.com/site/alimahdaviamiri/">Ali Mahdavi-Amiri</a>, <a href="https://fenggenyu.github.io/">Fenggen Yu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao*</strong></a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a>, <a href="http://www.cs.sfu.ca/~haoz/">Hao Zhang</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · ACM SIGGRAPH Asia 2020</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2019" data-year="2019" aria-labelledby="year-2019-heading">
+    <h2 id="year-2019-heading">2019</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="codesignfab carpentry pack" data-priority="0">
+        <a class="publication-image" href="https://grail.cs.washington.edu/projects/carpentrycompiler/" aria-label="Carpentry Compiler">
+          <img src="images/carpentry.png" alt="Carpentry Compiler" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://grail.cs.washington.edu/projects/carpentrycompiler/">Carpentry Compiler</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://grail.cs.washington.edu/projects/carpentrycompiler/">Project</a>
+            <a href="https://grail.cs.washington.edu/projects/carpentrycompiler/">Paper</a>
+          </div>
+          <p class="publication-summary">Compiles high-level carpentry designs into fabrication and assembly plans.</p>
+          <p class="publication-authors"><a href="https://chenming-wu.github.io/">Chenming Wu</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="https://homes.cs.washington.edu/~cnandi/">Chandrakana Nandi</a>, <a href="https://jeffreyianlipton.com/">Jeffrey I. Lipton</a>, <a href="https://homes.cs.washington.edu/~ztatlock/">Zachary Tatlock</a>, <a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · ACM SIGGRAPH Asia 2019</p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="geogen printing" data-priority="0">
+        <a class="publication-image" href="https://ieeexplore.ieee.org/document/8703138" aria-label="Strong 3D Printing by TPMS Injection">
+          <img src="images/injection.png" alt="Strong 3D Printing by TPMS Injection" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="https://ieeexplore.ieee.org/document/8703138">Strong 3D Printing by TPMS Injection</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="https://ieeexplore.ieee.org/document/8703138">Project</a>
+            <a href="paper/injection.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Strengthens printed structures by injecting triply periodic minimal-surface microstructures.</p>
+          <p class="publication-authors">Xin Yan, Cong Rao, <a href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</a>, <a href="http://www.cs.bgu.ac.il/~asharf/">Andrei Sharf</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a></p>
+          <p class="publication-venue"><a href="https://ieeexplore.ieee.org/document/8703138"><em>IEEE Transactions on Visualization and Computer Graphics (TVCG)</em></a>, 2019</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2018" data-year="2018" aria-labelledby="year-2018-heading">
+    <h2 id="year-2018-heading">2018</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="spatplan pathplan cnc analysis decom" data-priority="0">
+        <a class="publication-image" href="DSCarver/index.html" aria-label="DSCarver: Decompose-and-Spiral-Carve for Subtractive Manufacturing">
+          <img src="images/rep_image.png" alt="DSCarver: Decompose-and-Spiral-Carve for Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="DSCarver/index.html">DSCarver: Decompose-and-Spiral-Carve for Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="DSCarver/index.html">Project</a>
+            <a href="paper/cnc.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Decomposes shapes and generates spiral carving paths for subtractive manufacturing.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="http://www.cs.sfu.ca/~haoz/">Hao Zhang</a>, <a href="https://irc.cs.sdu.edu.cn/~shiqing/index.html">Shiqing Xin</a>, Yuanmin Deng, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="http://i.cs.hku.hk/~wenping/">Wenping Wang</a>, <a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a>, <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · <a href="https://s2018.siggraph.org/">ACM SIGGRAPH 2018</a></p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="other" data-priority="2">
+        <a class="publication-image" href="paper/Thesis.pdf" aria-label="Geometric Research and Application on Additive and Subtractive Manufacturing">
+          <img src="images/sdu.png" alt="Geometric Research and Application on Additive and Subtractive Manufacturing" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="paper/Thesis.pdf">Geometric Research and Application on Additive and Subtractive Manufacturing</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="paper/Thesis.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Studies geometric algorithms for additive and subtractive manufacturing applications.</p>
+          <p class="publication-authors"><strong>Haisen Zhao</strong></p>
+          <p class="publication-venue">Ph.D. Thesis, Shandong University, 2018 · In Chinese · CCF Outstanding Doctoral Dissertation Award 2019</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2016" data-year="2016" aria-labelledby="year-2016-heading">
+    <h2 id="year-2016-heading">2016</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="pathplan printing wire" data-priority="0">
+        <a class="publication-image" href="CFS/index.html" aria-label="Connected Fermat Spirals for Layered Fabrication">
+          <img src="images/spiral.jpg" alt="Connected Fermat Spirals for Layered Fabrication" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="CFS/index.html">Connected Fermat Spirals for Layered Fabrication</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="CFS/index.html">Project</a>
+            <a href="paper/fermat_spirals.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Generates connected, low-curvature spiral paths for continuous layered fabrication.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Fanglin Gu, <a href="http://ttic.uchicago.edu/~huangqx/">Qixing Huang</a>, J. A. Garcia Galicia, <a href="http://www-bcf.usc.edu/~yongchen/">Yong Chen</a>, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="http://hpcg.purdue.edu/bbenes/index.htm">Bedrich Benes</a>, <a href="http://www.cs.sfu.ca/~haoz/">Hao Zhang</a>, <a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a>, <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · <a href="http://s2016.siggraph.org/">ACM SIGGRAPH 2016</a></p>
+        </div>
+      </article>
+      <article class="publication-item" data-categories="geogen printing voronoi art" data-priority="0">
+        <a class="publication-image" href="Lampshades/index.html" aria-label="Printed Perforated Lampshades for Continuous Projective Images">
+          <img src="images/lamp.jpg" alt="Printed Perforated Lampshades for Continuous Projective Images" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="Lampshades/index.html">Printed Perforated Lampshades for Continuous Projective Images</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="Lampshades/index.html">Project</a>
+            <a href="paper/3dLamp_TOG_Final.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Designs perforated lampshades whose projected light forms continuous images.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</a>, Yuan Wei, <a href="http://www.cs.huji.ac.il/~danix/">Dani Lischinski</a>, <a href="http://www.cs.bgu.ac.il/~asharf/">Andrei Sharf</a>, <a href="http://www.cs.tau.ac.il/~dcor/">Daniel Cohen-Or</a>, <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · Presented at <a href="http://s2016.siggraph.org/">ACM SIGGRAPH 2016</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2015" data-year="2015" aria-labelledby="year-2015-heading">
+    <h2 id="year-2015-heading">2015</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="voronoi pack art" data-priority="2">
+        <a class="publication-image" href="paper/create_pdf.pdf" aria-label="Variational Circular Treemaps for Hierarchical Data">
+          <img src="images/circle.jpg" alt="Variational Circular Treemaps for Hierarchical Data" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="paper/create_pdf.pdf">Variational Circular Treemaps for Hierarchical Data</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="paper/create_pdf.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Optimizes circular treemap layouts for clear visualization of hierarchical data.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, <a href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</a>, Zhitao Bo</p>
+          <p class="publication-venue"><a href="http://www.jos.org.cn/ch/reader/view_abstract.aspx?file_no=4952&amp;flag=1"><em>Journal of Software</em></a> · <a href="http://www.cad.zju.edu.cn/home/pvis2015/">PacificVis 2015</a> · In Chinese</p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2014" data-year="2014" aria-labelledby="year-2014-heading">
+    <h2 id="year-2014-heading">2014</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="geogen printing voronoi" data-priority="0">
+        <a class="publication-image" href="BuildtoLast/index.html" aria-label="Build-to-Last: Strength to Weight 3D Printed Objects">
+          <img src="images/kitten.jpg" alt="Build-to-Last: Strength to Weight 3D Printed Objects" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="BuildtoLast/index.html">Build-to-Last: Strength to Weight 3D Printed Objects</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="BuildtoLast/index.html">Project</a>
+          </div>
+          <p class="publication-summary">Optimizes internal structures to improve the strength-to-weight ratio of 3D printed objects.</p>
+          <p class="publication-authors"><a href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</a>, <a href="http://www.cs.bgu.ac.il/~asharf/">Andrei Sharf</a>, <a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Yuan Wei, Qingnan Fan, Xuelin Chen, <a href="http://www.animlife.com/">Yann Savoye</a>, <a href="http://irc.cs.sdu.edu.cn/~chtu/index.html">Changhe Tu</a>, <a href="http://www.cs.tau.ac.il/~dcor//">Daniel Cohen-Or</a>, <a href="http://www.cs.sdu.edu.cn/~baoquan/">Baoquan Chen</a></p>
+          <p class="publication-venue"><em>ACM Transactions on Graphics (TOG)</em> · <a href="http://s2014.siggraph.org/">ACM SIGGRAPH 2014</a></p>
+        </div>
+      </article>
+    </div>
+  </section>
+  <section class="publication-year" id="year-2012" data-year="2012" aria-labelledby="year-2012-heading">
+    <h2 id="year-2012-heading">2012</h2>
+    <div class="publication-items">
+      <article class="publication-item" data-categories="geoprocess analysis voronoi" data-priority="2">
+        <a class="publication-image" href="paper/An Algorithm for Visibility Computation of Points in Polygon.pdf" aria-label="An Algorithm for Visibility Computation of Points Based on Voronoi Diagrams">
+          <img src="images/visibility.jpg" alt="An Algorithm for Visibility Computation of Points Based on Voronoi Diagrams" loading="lazy" decoding="async">
+        </a>
+        <div class="publication-content">
+          <h3><a href="paper/An Algorithm for Visibility Computation of Points in Polygon.pdf">An Algorithm for Visibility Computation of Points Based on Voronoi Diagrams</a></h3>
+          <div class="publication-resources" aria-label="Publication resources">
+            <a href="paper/An Algorithm for Visibility Computation of Points in Polygon.pdf">Paper</a>
+          </div>
+          <p class="publication-summary">Computes point visibility using geometric relationships derived from Voronoi diagrams.</p>
+          <p class="publication-authors"><a href="https://haisenzhao.github.io/"><strong>Haisen Zhao</strong></a>, Chenglei Yang, <a href="http://irc.cs.sdu.edu.cn/~lulin/">Lin Lu</a>, Xiaoting Wang, Yijun Yang, Xiangxu Meng</p>
+          <p class="publication-venue"><em>Journal of Computer-Aided Design &amp; Computer Graphics</em> · CAD/CG 2012, Best Student Paper · In Chinese</p>
+        </div>
+      </article>
+    </div>
+  </section>
+</div>
 
 
 
@@ -1708,309 +706,65 @@ segmentation</b>
 </main>
 </div>
 
-<script type="text/javascript">
+<script>
 (function () {
-	var categories = {
-		learning: [
-			"from orbit to ground",
-			"deepmill++: neural guidance meets rasterization",		
-			"deepmill: neural accessibility learning",
-			"recovering 3d shapes",
-			"rich and cross-fused",	
-			"mind:",
-		    "neural field-based"
-		],
-		geoprocess: [
-			"deepmill++: neural guidance meets rasterization",
-			"chapper: carvable hull-and-pack",
-			"deepmill: neural accessibility learning",
-			"manifold k-nn",
-			"an algorithm for visibility computation"
-		],
-		georecon: [
-			"enhanced energy absorption",
-			"from orbit to ground",
-			"recovering 3d shapes",
-			"rich and cross-fused",
-			"fabrication-aware reverse engineering"
-		],
-		geogen: [
-			"mind:",
-			"printed perforated lampshades",
-			"strong 3d printing",
-			"shell thickening",
-			"computational design of knit templates",
-			"build-to-last"
-		],
-		spatplan: [
-			"chapper: carvable hull-and-pack",
-			"carving shapes with ruled surfaces",
-			"carvable packing of revolved 3d objects",
-			"vdac: volume decompose-and-carve",	
-			"waste-to-value",
-			"dhmp:",
-			"as-continuous-as-possible",
-			"vasco:",
-		    "neural field-based",
-			"dscarver: decompose-and-spiral-carve"			
-		],
-		pathplan: [
-			"continuous toolpath optimization",
-			"as-continuous-as-possible",
-			"a roadmap towards parallel printing",
-			"vdac: volume decompose-and-carve",	
-			"robotic jigsaw:",
-			"dscarver: decompose-and-spiral-carve",
-			"connected fermat spirals"
-		],
-		printing: [
-			"mind:",
-			"waste-to-value",
-			"vasco:",
-			"a roadmap towards parallel printing",
-			"as-continuous-as-possible",
-			"printed perforated lampshades",
-			"strong 3d printing",
-			"shell thickening",
-			"connected fermat spirals",
-			"build-to-last"
-		],
-		cnc: [
-			"deepmill++: neural guidance meets rasterization",
-			"chapper: carvable hull-and-pack",
-			"deepmill: neural accessibility learning",
-			"carving shapes with ruled surfaces",
-			"carvable packing of revolved 3d objects",
-			"vdac: volume decompose-and-carve",	
-			"waste-to-value",
-			"dhmp:",
-			"vasco:",
-		    "neural field-based",
-			"dscarver: decompose-and-spiral-carve"
-		],
-		hybridfab: [
-			"wiresculptor:",
-			"tune-it:",
-			"waste-to-value",
-			"dhmp:",
-			"vasco:",
-		    "neural field-based"		
-		],
-		codesignfab: [
-			"co-optimization of design and fabrication plans",
-			"carpentry compiler",
-			"computational design of knit templates"
-		],
-		analysis: [
-			"deepmill++: neural guidance meets rasterization",
-			"chapper: carvable hull-and-pack",
-			"deepmill: neural accessibility learning",
-			"vasco:",
-			"dscarver: decompose-and-spiral-carve",
-			"an algorithm for visibility computation",
-			"carvable packing of revolved 3d objects",
-			"as-continuous-as-possible"			
-		],
-		dataset: [
-		    "neural field-based",
-			"dhmp:",
-			"mind:",
-			"deepmill++: neural guidance meets rasterization",
-			"deepmill: neural accessibility learning",			
-		],
-		wire: [
-			"wiresculptor:",
-			"tune-it:",	
-			"connected fermat spirals"			
-		],
-		carpentry: [
-			"fabrication-aware reverse engineering",			
-			"co-optimization of design and fabrication plans",
-			"carpentry compiler",			
-		],
-		voronoi: [
-			"manifold k-nn",
-			"chapper: carvable hull-and-pack",
-			"printed perforated lampshades",
-			"build-to-last",	
-			"variational circular treemaps",			
-			"an algorithm for visibility computation"		
-		],
-		pack: [
-			"chapper: carvable hull-and-pack",
-			"carvable packing of revolved 3d objects",
-			"co-optimization of design and fabrication plans",
-			"carpentry compiler",			
-			"variational circular treemaps"		
-		],
-		decom: [
-			"carving shapes with ruled surfaces",
-			"vdac: volume decompose-and-carve",	
-			"waste-to-value",
-			"as-continuous-as-possible",
-			"vasco:",
-		    "neural field-based",
-			"dscarver: decompose-and-spiral-carve"				
-		],
-		robot: [
-			"a roadmap towards parallel printing",
-			"robotic jigsaw:"
-		],
-		art: [
-			"recovering 3d shapes",
-			"wiresculptor:",
-			"tune-it:",	
-			"printed perforated lampshades",		
-			"variational circular treemaps"	
-		],
-		other: [
-			"geometric research and application"
-		]
-	};
-	var labels = {
-		all: "All",
-		learning: "AI & Geometric Learning",
-		geoprocess: "Geometry Processing",
-		georecon: "3D Reconstruction",
-		geogen: "3D Geometry Generation",
-		spatplan: "Process & Sequence Planning",
-		pathplan: "Toolpath Planning",
-		printing: "Additive Manufacturing",
-		cnc: "Subtractive Manufacturing",
-		hybridfab: "Hybrid Manufacturing",
-		codesignfab: "Design–Fabrication Integration",
-		analysis: "Manufacturability Analysis",
-		dataset: "Datasets & Benchmarks",
-		wire: "Continuous-Path Fabrication",
-		carpentry: "Carpentry",
-		voronoi: "Voronoi",
-		pack: "Packing",
-		decom: "Decomposition",
-		robot: "Robotics",
-		art: "Computational Art & Craft",
-		other: "Others"
-	};
-	function normalize(text) {
-		return text.replace(/\s+/g, " ").replace(/\u2011|\u2012|\u2013|\u2014/g, "-").toLowerCase();
-	}
-	function findCategories(title) {
-		var category;
-		var i;
-		var matches = [];
-		for (category in categories) {
-			if (categories.hasOwnProperty(category)) {
-				for (i = 0; i < categories[category].length; i += 1) {
-					if (title.indexOf(categories[category][i]) !== -1) {
-						matches.push(category);
-						break;
-					}
-				}
-			}
-		}
-		return matches.length ? matches : ["other"];
-	}
-	document.addEventListener("DOMContentLoaded", function () {
-		var table = document.querySelector(".publication-list tbody");
-		var buttons = document.querySelectorAll(".publication-filter button");
-		var status = document.getElementById("publication-filter-status");
-		var rows;
-		var papers = [];
-		var yearGroups = [];
-		var currentYear = null;
-		var spacer = null;
-		var resourceLinks;
-		var resourceIndex;
-		var resourceText;
-		var adjacentNode;
-		var i;
-		if (!table) {
-			return;
-		}
-		resourceLinks = table.querySelectorAll("a");
-		for (resourceIndex = 0; resourceIndex < resourceLinks.length; resourceIndex += 1) {
-			resourceText = normalize(resourceLinks[resourceIndex].textContent || resourceLinks[resourceIndex].innerText || "");
-			if (resourceText === "project page" || resourceText === "paper" || resourceText === "slides") {
-				resourceLinks[resourceIndex].classList.add("publication-resource");
-				if (resourceText === "project page") {
-					resourceLinks[resourceIndex].textContent = "Project";
-				}
-				adjacentNode = resourceLinks[resourceIndex].previousSibling;
-				if (adjacentNode && adjacentNode.nodeType === 3) {
-					adjacentNode.nodeValue = adjacentNode.nodeValue.replace(/\[\s*$/, "");
-				}
-				adjacentNode = resourceLinks[resourceIndex].nextSibling;
-				if (adjacentNode && adjacentNode.nodeType === 3) {
-					adjacentNode.nodeValue = adjacentNode.nodeValue.replace(/^\s*\]/, "");
-				}
-			}
-		}
-		rows = table.getElementsByTagName("tr");
-		for (i = 0; i < rows.length; i += 1) {
-			if (rows[i].querySelector("td[colspan='2']")) {
-				var separatorText = normalize(rows[i].textContent || rows[i].innerText || "");
-				if (/^\s*\d{4}\s*$/.test(separatorText)) {
-					currentYear = {
-						row: rows[i],
-						visiblePapers: 0
-					};
-					yearGroups.push(currentYear);
-					spacer = null;
-				} else {
-					spacer = rows[i];
-				}
-			} else if (rows[i].cells.length > 1) {
-				var titleNode = rows[i].cells[1].getElementsByTagName("b")[0];
-				if (titleNode) {
-					var title = normalize(titleNode.textContent || titleNode.innerText || "");
-					papers.push({
-						row: rows[i],
-						spacer: spacer,
-						year: currentYear,
-						categories: findCategories(title)
-					});
-					spacer = null;
-				}
-			}
-		}
-		function applyFilter(filter) {
-			var visible = 0;
-			var show;
-			var active;
-			for (i = 0; i < yearGroups.length; i += 1) {
-				yearGroups[i].visiblePapers = 0;
-			}
-			for (i = 0; i < papers.length; i += 1) {
-				show = filter === "all" || papers[i].categories.indexOf(filter) !== -1;
-				papers[i].row.style.display = show ? "" : "none";
-				if (papers[i].spacer) {
-					papers[i].spacer.style.display = show ? "" : "none";
-				}
-				if (show) {
-					visible += 1;
-					if (papers[i].year) {
-						papers[i].year.visiblePapers += 1;
-					}
-				}
-			}
-			for (i = 0; i < yearGroups.length; i += 1) {
-				yearGroups[i].row.style.display = yearGroups[i].visiblePapers ? "" : "none";
-			}
-			for (i = 0; i < buttons.length; i += 1) {
-				active = buttons[i].getAttribute("data-filter") === filter;
-				buttons[i].className = active ? "active" : "";
-				buttons[i].setAttribute("aria-pressed", active ? "true" : "false");
-			}
-			if (status) {
-				status.innerHTML = labels[filter] + ": " + visible + " publication" + (visible === 1 ? "" : "s");
-			}
-		}
-		for (i = 0; i < buttons.length; i += 1) {
-			buttons[i].onclick = function () {
-				applyFilter(this.getAttribute("data-filter"));
-			};
-		}
-		applyFilter("all");
-	});
+  "use strict";
+
+  var buttons = document.querySelectorAll(".publication-filter button");
+  var groups = document.querySelectorAll(".publication-year");
+  var publications = document.querySelectorAll(".publication-item");
+  var status = document.getElementById("publication-filter-status");
+  var labels = {
+    all: "All",
+    learning: "AI & Geometric Learning",
+    geoprocess: "Geometry Processing",
+    georecon: "3D Reconstruction",
+    geogen: "3D Geometry Generation",
+    spatplan: "Process & Sequence Planning",
+    pathplan: "Toolpath Planning",
+    printing: "Additive Manufacturing",
+    cnc: "Subtractive Manufacturing",
+    hybridfab: "Hybrid Manufacturing",
+    codesignfab: "Design–Fabrication Integration",
+    analysis: "Manufacturability Analysis",
+    dataset: "Datasets & Benchmarks",
+    wire: "Continuous-Path Fabrication",
+    carpentry: "Carpentry",
+    voronoi: "Voronoi",
+    pack: "Packing",
+    decom: "Decomposition",
+    robot: "Robotics",
+    art: "Computational Art & Craft",
+    other: "Others"
+  };
+
+  function applyFilter(filter) {
+    var visible = 0;
+    publications.forEach(function (publication) {
+      var categories = (publication.dataset.categories || "").split(" ");
+      var show = filter === "all" || categories.indexOf(filter) !== -1;
+      publication.hidden = !show;
+      if (show) visible += 1;
+    });
+    groups.forEach(function (group) {
+      group.hidden = !group.querySelector(".publication-item:not([hidden])");
+    });
+    buttons.forEach(function (button) {
+      var active = button.dataset.filter === filter;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    if (status) {
+      status.textContent = labels[filter] + ": " + visible + " publication" + (visible === 1 ? "" : "s");
+    }
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      applyFilter(button.dataset.filter);
+    });
+  });
+  applyFilter("all");
 }());
 </script>
 
